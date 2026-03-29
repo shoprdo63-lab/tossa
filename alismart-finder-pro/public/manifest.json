@@ -1,0 +1,69 @@
+{
+  "manifest_version": 3,
+  "name": "AliSmart Finder Pro",
+  "version": "2.0.0",
+  "description": "התוסף החכם ל-AliExpress - מצא מוצרים זולים יותר והשווה מחירים",
+  "default_locale": "he",
+  "permissions": [
+    "storage",
+    "activeTab",
+    "identity",
+    "identity.email",
+    "notifications",
+    "alarms"
+  ],
+  "host_permissions": [
+    "https://*.aliexpress.com/*",
+    "https://*.aliexpress.us/*",
+    "https://*.aliexpress.ru/*",
+    "https://alismart-proxy.vercel.app/*",
+    "https://open.er-api.com/*"
+  ],
+  "background": {
+    "service_worker": "dist/background.js",
+    "type": "module"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.aliexpress.com/*",
+        "https://*.aliexpress.us/*",
+        "https://*.aliexpress.ru/*",
+        "https://aliexpress.com/*",
+        "https://aliexpress.us/*",
+        "https://aliexpress.ru/*"
+      ],
+      "js": ["dist/content.js"],
+      "css": ["dist/content.css"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "index.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": [
+        "dist/*.js",
+        "dist/*.css",
+        "assets/*"
+      ],
+      "matches": [
+        "https://*.aliexpress.com/*",
+        "https://*.aliexpress.us/*",
+        "https://*.aliexpress.ru/*"
+      ]
+    }
+  ]
+}

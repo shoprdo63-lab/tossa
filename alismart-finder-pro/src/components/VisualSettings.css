@@ -1,0 +1,318 @@
+/**
+ * VisualSettings Styles
+ * Premium Spotify-style settings panel
+ */
+
+.visual-settings {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.5) 0%, rgba(22, 33, 62, 0.5) 100%);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  padding: 20px;
+  margin: 16px 0;
+}
+
+/* Header */
+.settings-section-header {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+
+.settings-section-header svg {
+  color: #ff6a00;
+}
+
+.settings-section-header h3 {
+  font-size: 16px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  flex: 1;
+}
+
+.save-indicator {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 11px;
+  color: #00d084;
+  font-weight: 500;
+}
+
+.save-indicator svg {
+  color: #00d084 !important;
+}
+
+.settings-desc {
+  font-size: 13px;
+  color: #888;
+  margin: 0 0 20px;
+  line-height: 1.5;
+}
+
+/* Display Mode Options */
+.display-mode-options {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 24px;
+}
+
+.mode-option {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 14px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid transparent;
+  border-radius: 12px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.mode-option:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.mode-option.active {
+  background: linear-gradient(135deg, rgba(255, 106, 0, 0.15) 0%, rgba(238, 9, 121, 0.15) 100%);
+  border-color: #ff6a00;
+}
+
+.mode-icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 10px;
+  color: #888;
+  flex-shrink: 0;
+}
+
+.mode-option.active .mode-icon {
+  background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+  color: #fff;
+}
+
+.mode-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.mode-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #fff;
+}
+
+.mode-desc {
+  font-size: 12px;
+  color: #888;
+}
+
+.mode-option.active .mode-desc {
+  color: #ff8c42;
+}
+
+.mode-checkmark {
+  color: #ff6a00;
+  flex-shrink: 0;
+}
+
+/* Position Options */
+.settings-subsection {
+  margin-bottom: 24px;
+}
+
+.settings-subsection h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #b8b8d1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+}
+
+.position-options {
+  display: flex;
+  gap: 8px;
+}
+
+.position-option {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 44px;
+  height: 44px;
+  background: rgba(255, 255, 255, 0.03);
+  border: 2px solid transparent;
+  border-radius: 10px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.position-option:hover {
+  background: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.1);
+  color: #b8b8d1;
+}
+
+.position-option.active {
+  background: linear-gradient(135deg, rgba(255, 106, 0, 0.2) 0%, rgba(238, 9, 121, 0.2) 100%);
+  border-color: #ff6a00;
+  color: #ff8c42;
+}
+
+/* Preview Section */
+.preview-section {
+  margin-bottom: 16px;
+}
+
+.preview-section h4 {
+  font-size: 13px;
+  font-weight: 600;
+  color: #b8b8d1;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin: 0 0 12px;
+}
+
+.preview-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  overflow: hidden;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.preview-card:hover {
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.preview-card.off-mode .preview-button {
+  opacity: 0;
+  pointer-events: none;
+}
+
+.preview-card.hover-mode .preview-button {
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.2s ease;
+}
+
+.preview-card.hover-mode:hover .preview-button {
+  opacity: 1;
+  pointer-events: auto;
+  transform: scale(1);
+}
+
+.preview-image {
+  position: relative;
+  height: 120px;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.03) 0%, rgba(255, 255, 255, 0.08) 100%);
+  overflow: hidden;
+}
+
+.preview-placeholder {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: #666;
+}
+
+.preview-button {
+  position: absolute;
+  width: 36px;
+  height: 36px;
+  background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+  border: none;
+  border-radius: 9999px;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.25),
+    0 4px 6px -2px rgba(0, 0, 0, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #fff;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  z-index: 10;
+}
+
+.preview-button:hover {
+  transform: scale(1.1);
+  box-shadow:
+    0 15px 25px -5px rgba(238, 9, 121, 0.4),
+    0 0 30px rgba(238, 9, 121, 0.3);
+}
+
+.preview-info {
+  padding: 12px;
+}
+
+.preview-title {
+  display: block;
+  font-size: 12px;
+  font-weight: 500;
+  color: #fff;
+  margin-bottom: 4px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.preview-price {
+  display: block;
+  font-size: 14px;
+  font-weight: 600;
+  color: #00d084;
+}
+
+.preview-hint {
+  font-size: 11px;
+  color: #666;
+  text-align: center;
+  margin: 8px 0 0;
+}
+
+/* Footer */
+.settings-footer {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding-top: 16px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  font-size: 12px;
+  color: #666;
+}
+
+.settings-footer svg {
+  color: #666;
+  flex-shrink: 0;
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .visual-settings {
+    padding: 16px;
+  }
+  
+  .mode-option {
+    padding: 12px;
+  }
+  
+  .mode-icon {
+    width: 36px;
+    height: 36px;
+  }
+}

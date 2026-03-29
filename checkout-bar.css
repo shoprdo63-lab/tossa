@@ -1,0 +1,219 @@
+/**
+ * Checkout Bar CSS
+ * Premium gradient banner showing deal grade on checkout pages
+ * AliSmart brand styling with glass morphism effect
+ */
+
+#alismart-checkout-bar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 2147483647 !important;
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.95) 0%, rgba(22, 33, 62, 0.95) 100%);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 12px 20px;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.3);
+  animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@keyframes slideDown {
+  from {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+#alismart-checkout-bar:hover {
+  background: linear-gradient(135deg, rgba(26, 26, 46, 0.98) 0%, rgba(22, 33, 62, 0.98) 100%);
+}
+
+/* Brand Section */
+.alismart-bar-brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.alismart-bar-logo {
+  width: 28px;
+  height: 28px;
+  background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.alismart-bar-title {
+  color: #fff;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Deal Grade Badge */
+.alismart-bar-grade {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 6px 14px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.alismart-bar-grade-badge {
+  padding: 4px 10px;
+  border-radius: 12px;
+  font-size: 13px;
+  font-weight: 700;
+  color: white;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.alismart-bar-grade-badge.excellent { background: linear-gradient(135deg, #00d084, #00b894); }
+.alismart-bar-grade-badge.great { background: linear-gradient(135deg, #00d084, #00b894); }
+.alismart-bar-grade-badge.good { background: linear-gradient(135deg, #ffa500, #ff6a00); }
+.alismart-bar-grade-badge.fair { background: linear-gradient(135deg, #ff6a00, #ee0979); }
+.alismart-bar-grade-badge.poor { background: linear-gradient(135deg, #ee0979, #c0392b); }
+
+.alismart-bar-savings {
+  color: #00d084;
+  font-size: 14px;
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Optimization Summary */
+.alismart-bar-summary {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #b8b8d1;
+  font-size: 13px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.alismart-bar-summary svg {
+  flex-shrink: 0;
+  color: #ff6a00;
+}
+
+/* Action Button */
+.alismart-bar-action {
+  padding: 8px 18px;
+  background: linear-gradient(135deg, #ff6a00 0%, #ee0979 100%);
+  border: none;
+  border-radius: 8px;
+  color: white;
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+  flex-shrink: 0;
+}
+
+.alismart-bar-action:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(238, 9, 121, 0.4);
+}
+
+/* Close Button */
+.alismart-bar-close {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.1);
+  border: none;
+  border-radius: 6px;
+  color: #888;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex-shrink: 0;
+}
+
+.alismart-bar-close:hover {
+  background: rgba(255, 255, 255, 0.2);
+  color: #fff;
+}
+
+/* Customs Warning in Bar */
+.alismart-bar-warning {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px;
+  background: rgba(255, 166, 0, 0.2);
+  border: 1px solid rgba(255, 166, 0, 0.4);
+  border-radius: 20px;
+  color: #ffa500;
+  font-size: 12px;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  #alismart-checkout-bar {
+    padding: 10px 12px;
+    flex-wrap: wrap;
+    gap: 8px;
+  }
+  
+  .alismart-bar-summary {
+    display: none;
+  }
+  
+  .alismart-bar-grade {
+    order: 2;
+  }
+  
+  .alismart-bar-action {
+    order: 3;
+  }
+}
+
+/* RTL Support */
+html[dir="rtl"] #alismart-checkout-bar,
+html[lang="he"] #alismart-checkout-bar,
+html[lang="ar"] #alismart-checkout-bar {
+  direction: rtl;
+}
+
+/* Body padding when bar is shown */
+body.alismart-checkout-bar-visible {
+  padding-top: 56px !important;
+}
+
+/* Animation for updates */
+.alismart-bar-update {
+  animation: pulse 0.5s ease;
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.02); }
+}

@@ -1,0 +1,326 @@
+/**
+ * Polish Raid CSS - Floating Button Fix for AliExpress
+ * Premium glass morphism floating buttons with smooth animations
+ * Injected into AliExpress pages by content.js
+ */
+
+/* ============================================
+   FLOATING BUTTON BASE STYLES
+   ============================================ */
+
+/* Container for the floating button - ensure proper positioning */
+.alismart-float-container {
+  position: absolute !important;
+  top: 8px !important;
+  right: 8px !important;
+  z-index: 2147483647 !important;
+  pointer-events: auto !important;
+  overflow: visible !important;
+  isolation: isolate !important;
+}
+
+/* The floating button itself - premium glass morphism style */
+.alismart-float-btn {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 40px !important;
+  height: 40px !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 106, 0, 0.95) 0%,
+    rgba(238, 9, 121, 0.95) 100%
+  ) !important;
+  border: none !important;
+  border-radius: 9999px !important;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.25),
+    0 4px 6px -2px rgba(0, 0, 0, 0.15),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+  backdrop-filter: blur(5px) !important;
+  -webkit-backdrop-filter: blur(5px) !important;
+  cursor: pointer !important;
+  transition: all 0.2s cubic-bezier(0.4, 0, 0.2, 1) !important;
+  transform: translateZ(0) !important;
+  will-change: transform, box-shadow !important;
+  overflow: visible !important;
+}
+
+/* Hover state - enhanced glow and lift */
+.alismart-float-btn:hover {
+  transform: translateY(-2px) scale(1.05) translateZ(0) !important;
+  box-shadow:
+    0 20px 25px -5px rgba(238, 9, 121, 0.4),
+    0 10px 10px -5px rgba(0, 0, 0, 0.2),
+    0 0 0 2px rgba(255, 255, 255, 0.2) inset,
+    0 0 30px rgba(238, 9, 121, 0.3) !important;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 120, 20, 1) 0%,
+    rgba(238, 20, 130, 1) 100%
+  ) !important;
+}
+
+/* Active/pressed state */
+.alismart-float-btn:active {
+  transform: translateY(0) scale(0.98) translateZ(0) !important;
+  box-shadow:
+    0 5px 10px -2px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+}
+
+/* Button icon styling */
+.alismart-float-btn svg {
+  width: 20px !important;
+  height: 20px !important;
+  color: #ffffff !important;
+  filter: drop-shadow(0 1px 2px rgba(0, 0, 0, 0.2)) !important;
+  pointer-events: none !important;
+}
+
+/* ============================================
+   DISPLAY MODES
+   ============================================ */
+
+/* MODE: OFF - Hide all buttons completely */
+.alismart-display-off .alismart-float-container,
+.alismart-display-off .alismart-float-btn {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* MODE: HOVER ONLY - Show only on card hover */
+.alismart-display-hover .alismart-float-container {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity 0.2s ease, transform 0.2s ease !important;
+  transform: scale(0.9) !important;
+}
+
+/* Show on product card hover */
+.alismart-display-hover .product-card:hover .alismart-float-container,
+.alismart-display-hover [data-product-id]:hover .alismart-float-container,
+.alismart-display-hover .search-item:hover .alismart-float-container,
+.alismart-display-hover .item:hover .alismart-float-container,
+.alismart-display-hover .product-item:hover .alismart-float-container {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+  transform: scale(1) !important;
+}
+
+/* ============================================
+   PRODUCT CARD FIXES
+   Ensure buttons aren't clipped
+   ============================================ */
+
+/* Fix overflow issues on common AliExpress card containers */
+.product-card,
+[data-product-id],
+.search-item,
+.product-item,
+.item,
+[id*="product"] {
+  overflow: visible !important;
+  position: relative !important;
+}
+
+/* Fix for image containers that clip children */
+.product-card .images,
+.product-card .pic,
+.product-card .img,
+[data-product-id] .images,
+[data-product-id] .pic,
+.search-item .img,
+.product-item .image {
+  overflow: visible !important;
+  position: relative !important;
+}
+
+/* ============================================
+   ALTERNATIVE BUTTON STYLES
+   ============================================ */
+
+/* Secondary variant - more subtle */
+.alismart-float-btn.variant-subtle {
+  background: rgba(26, 26, 46, 0.9) !important;
+  border: 1px solid rgba(255, 255, 255, 0.2) !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+}
+
+.alismart-float-btn.variant-subtle:hover {
+  background: rgba(255, 106, 0, 0.95) !important;
+  border-color: transparent !important;
+}
+
+/* Icon-only variant */
+.alismart-float-btn.variant-icon-only {
+  width: 36px !important;
+  height: 36px !important;
+}
+
+.alismart-float-btn.variant-icon-only svg {
+  width: 18px !important;
+  height: 18px !important;
+}
+
+/* With text variant */
+.alismart-float-btn.variant-with-text {
+  width: auto !important;
+  padding: 0 16px 0 12px !important;
+  gap: 6px !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  color: #ffffff !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes alismart-float-in {
+  from {
+    opacity: 0;
+    transform: translateY(-10px) scale(0.9);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+@keyframes alismart-pulse {
+  0%, 100% {
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.25),
+      0 4px 6px -2px rgba(0, 0, 0, 0.15);
+  }
+  50% {
+    box-shadow:
+      0 15px 20px -3px rgba(238, 9, 121, 0.3),
+      0 8px 10px -2px rgba(0, 0, 0, 0.2);
+  }
+}
+
+/* Entry animation for buttons */
+.alismart-float-container:not(.alismart-display-hover .alismart-float-container) {
+  animation: alismart-float-in 0.3s ease-out !important;
+}
+
+/* Pulse animation for attention */
+.alismart-float-btn.pulse {
+  animation: alismart-pulse 2s infinite !important;
+}
+
+/* ============================================
+   HOVER TOOLTIP
+   ============================================ */
+
+.alismart-float-tooltip {
+  position: absolute !important;
+  bottom: calc(100% + 8px) !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  padding: 6px 12px !important;
+  background: rgba(26, 26, 46, 0.95) !important;
+  color: #ffffff !important;
+  font-size: 12px !important;
+  font-weight: 500 !important;
+  white-space: nowrap !important;
+  border-radius: 8px !important;
+  box-shadow:
+    0 10px 15px -3px rgba(0, 0, 0, 0.2),
+    0 0 0 1px rgba(255, 255, 255, 0.1) inset !important;
+  opacity: 0 !important;
+  visibility: hidden !important;
+  transition: all 0.2s ease !important;
+  pointer-events: none !important;
+  backdrop-filter: blur(10px) !important;
+  -webkit-backdrop-filter: blur(10px) !important;
+  z-index: 2147483648 !important;
+}
+
+.alismart-float-container:hover .alismart-float-tooltip {
+  opacity: 1 !important;
+  visibility: visible !important;
+  transform: translateX(-50%) translateY(-4px) !important;
+}
+
+/* Tooltip arrow */
+.alismart-float-tooltip::after {
+  content: '' !important;
+  position: absolute !important;
+  top: 100% !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  border: 6px solid transparent !important;
+  border-top-color: rgba(26, 26, 46, 0.95) !important;
+}
+
+/* ============================================
+   RESPONSIVE ADJUSTMENTS
+   ============================================ */
+
+/* Mobile optimization */
+@media (max-width: 768px) {
+  .alismart-float-container {
+    top: 6px !important;
+    right: 6px !important;
+  }
+  
+  .alismart-float-btn {
+    width: 36px !important;
+    height: 36px !important;
+  }
+  
+  .alismart-float-btn svg {
+    width: 18px !important;
+    height: 18px !important;
+  }
+}
+
+/* Small mobile screens */
+@media (max-width: 375px) {
+  .alismart-float-btn {
+    width: 32px !important;
+    height: 32px !important;
+  }
+  
+  .alismart-float-btn svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+}
+
+/* ============================================
+   RTL SUPPORT
+   ============================================ */
+
+[dir="rtl"] .alismart-float-container,
+html[lang="he"] .alismart-float-container,
+html[lang="ar"] .alismart-float-container {
+  right: auto !important;
+  left: 8px !important;
+}
+
+[dir="rtl"] .alismart-float-tooltip,
+html[lang="he"] .alismart-float-tooltip,
+html[lang="ar"] .alismart-float-tooltip {
+  transform: translateX(50%) !important;
+}
+
+/* ============================================
+   DARK THEME OPTIMIZATION
+   ============================================ */
+
+/* Enhanced visibility on dark backgrounds */
+@media (prefers-color-scheme: dark) {
+  .alismart-float-btn {
+    box-shadow:
+      0 10px 15px -3px rgba(0, 0, 0, 0.4),
+      0 4px 6px -2px rgba(0, 0, 0, 0.3),
+      0 0 0 1px rgba(255, 255, 255, 0.15) inset !important;
+  }
+}

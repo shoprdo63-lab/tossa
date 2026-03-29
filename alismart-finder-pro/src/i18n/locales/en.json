@@ -1,0 +1,776 @@
+{
+  "app": {
+    "name": "AliSmart Finder Pro",
+    "version": "Version 2.0.0"
+  },
+  "tabs": {
+    "search": "Search",
+    "favorites": "Favorites",
+    "settings": "Settings"
+  },
+  "header": {
+    "close": "Close",
+    "theme": {
+      "light": "Switch to light mode",
+      "dark": "Switch to dark mode"
+    }
+  },
+  "search": {
+    "title": "Product Search",
+    "placeholder": "Search products...",
+    "searchingFor": "Searching for alternatives to:",
+    "currentPrice": "Current price:",
+    "resultsFound": "{{count}} results found",
+    "noResults": "No results found",
+    "tryDifferent": "Try searching for a different product",
+    "minRating": "Products need {{rating}}+ stars to appear",
+    "loading": "Searching for better prices...",
+    "loadingSubtitle": "Performing visual and text search simultaneously",
+    "recent": "Recent searches",
+    "suggestions": "Suggestions",
+    "clear": "Clear",
+    "remove": "Remove",
+    "searching": "Searching...",
+    "resultsFor": "Results for",
+    "tryAgain": "Try different keywords",
+    "popular": "Popular searches",
+    "pressEnter": "Press Enter to search",
+    "trigger": {
+      "title": "Find a better price",
+      "tooltip": "Find a cheaper price"
+    }
+  },
+  "product": {
+    "bestDeal": "Best Deal",
+    "viewProduct": "View Product",
+    "addToFavorites": "Add to favorites",
+    "removeFromFavorites": "Remove from favorites",
+    "savings": "Save {{percent}}%",
+    "trust": {
+      "high": "Top Rated",
+      "medium": "Verified",
+      "low": "New Seller",
+      "unknown": "New Seller"
+    },
+    "price": {
+      "item": "Item",
+      "shipping": "Shipping",
+      "total": "Total",
+      "freeShipping": "Free shipping",
+      "notAvailable": "N/A"
+    },
+    "rating": "{{rating}} stars",
+    "orders": "{{count}} sold"
+  },
+  "favorites": {
+    "title": "Saved Products",
+    "empty": {
+      "title": "No favorites yet",
+      "description": "When you find products you like, click the heart icon to save them here"
+    },
+    "count": "{{count}} saved product",
+    "count_plural": "{{count}} saved products",
+    "savedOn": "Saved on {{date}}",
+    "remove": "Remove"
+  },
+  "settings": {
+    "title": "Settings",
+    "display": {
+      "title": "Display",
+      "darkMode": "Dark Mode",
+      "darkModeDescription": "Enable dark theme for night usage"
+    },
+    "buttonDisplay": {
+      "title": "Button Display",
+      "description": "Control how AliSmart buttons appear on AliExpress product cards",
+      "alwaysOn": "Always On",
+      "alwaysOnDesc": "Buttons visible on all products",
+      "hoverOnly": "Hover Only",
+      "hoverOnlyDesc": "Appear when hovering over products",
+      "hidden": "Hidden",
+      "hiddenDesc": "Disable all floating buttons"
+    },
+    "buttonPosition": {
+      "title": "Button Position",
+      "topRight": "Top Right",
+      "topLeft": "Top Left"
+    },
+    "preview": "Preview",
+    "previewHint": "Hover over the preview card to see the button",
+    "saved": "Saved!",
+    "changesApply": "Changes apply immediately to all AliExpress tabs"
+  },
+  "language": {
+    "title": "Language",
+    "label": "Interface Language",
+    "options": {
+      "he": "Hebrew",
+      "en": "English"
+    }
+  },
+  "currency": {
+    "title": "Currency",
+    "label": "Preferred Currency",
+    "options": {
+      "ILS": "Shekel (₪)",
+      "USD": "Dollar ($)",
+      "EUR": "Euro (€)",
+      "GBP": "Pound Sterling (£)"
+    }
+  },
+  "searchSettings": {
+    "title": "Search",
+    "sortBy": "Sort Results",
+    "sortOptions": {
+      "SALE_PRICE_ASC": "Price - Low to High",
+      "SALE_PRICE_DESC": "Price - High to Low",
+      "EVALUATE_RATE_ASC": "Rating - High to Low",
+      "SALE_QTY_ASC": "Orders - High to Low"
+    }
+  },
+  "help": {
+    "title": "Help",
+    "guide": "User Guide",
+    "feedback": "Feedback"
+  },
+  "about": {
+    "version": "AliSmart Finder Pro v2.0.0",
+    "copyright": "© 2026 AliSmart. All rights reserved."
+  },
+  "errors": {
+    "searchFailed": "Search failed. Please try again.",
+    "networkError": "Network error. Check your connection.",
+    "noImage": "No image found",
+    "noTitle": "No title found"
+  },
+  "status": {
+    "searching": "Searching...",
+    "loading": "Loading...",
+    "saving": "Saving...",
+    "saved": "Saved!",
+    "removed": "Removed",
+    "error": "Error occurred"
+  },
+  "filters": {
+    "title": "Filters",
+    "results": "{{count}} results",
+    "priceRange": "Price Range",
+    "min": "Min",
+    "max": "Max",
+    "freeShipping": "Free Shipping",
+    "topRated": "Top Rated 4.5+",
+    "clear": "Clear All"
+  },
+  "sort": {
+    "sortBy": "Sort by",
+    "options": {
+      "best_match": "Best Match",
+      "price_asc": "Price: Low to High",
+      "price_desc": "Price: High to Low",
+      "rating_desc": "Rating: High to Low",
+      "shipping_speed": "Shipping Speed"
+    }
+  },
+  "noResults": {
+    "title": "No matches found",
+    "description": "Try adjusting your filters to see more results",
+    "adjustFilters": "Adjust Filters"
+  },
+  "chart": {
+    "priceHistory": "Price History",
+    "days": "days",
+    "noData": "No history data available",
+    "lowest": "Lowest",
+    "highest": "Highest",
+    "average": "Average",
+    "current": "Current",
+    "today": "today",
+    "daysAgo": "{{count}} days ago",
+    "greatDeal": "Great deal! Lowest price",
+    "goodDeal": "Good deal - Below average",
+    "averagePrice": "Average price"
+  },
+  "activeFilters": {
+    "searchingFor": "Searching for",
+    "color": "Color",
+    "size": "Size",
+    "model": "Model",
+    "clear": "Clear",
+    "clearColor": "Clear color filter",
+    "clearSize": "Clear size filter",
+    "clearModel": "Clear model filter"
+  },
+  "trust": {
+    "sellerTrust": "Seller Trust",
+    "feedbackRate": "Feedback Rate",
+    "storeAge": "Store Age",
+    "aliRating": "AliExpress Rating",
+    "yearsOpen": "{{count}} years",
+    "high": "Verified",
+    "medium": "Moderate",
+    "low": "Risky",
+    "topBrand": "Top Brand",
+    "verifiedStore": "Verified Store since {{year}}",
+    "highResponseRate": "High response rate",
+    "lowNegativeFeedback": "Low negative feedback",
+    "nonFilteredWarning": "Store may contain non-filtered product images",
+    "newStore": "New store"
+  },
+  "cloud": {
+    "syncing": "Syncing...",
+    "synced": "Synced",
+    "offline": "Offline",
+    "error": "Sync failed",
+    "justNow": "Just now",
+    "minutesAgo": "{{count}} min ago",
+    "hoursAgo": "{{count}} hours ago",
+    "cloudSync": "Cloud Sync",
+    "universalFavorites": "Universal Favorites",
+    "syncDescription": "Your favorites are synced across all devices",
+    "retrySync": "Retry Sync",
+    "export": "Export",
+    "import": "Import",
+    "backupCreated": "Backup created successfully",
+    "restoreSuccess": "Favorites restored successfully"
+  },
+  "coupon": {
+    "searching": "Searching for coupons...",
+    "foundForOrder": "Found {{count}} coupons for your order!",
+    "availableCodes": "{{count}} coupon codes available",
+    "potentialSavings": "Potential savings: {{amount}}",
+    "applyNow": "Apply Now",
+    "bestForYou": "Best for you",
+    "moreAvailable": "{{count}} more available",
+    "showAll": "Show all {{count}} coupons",
+    "save": "Save",
+    "saveUpTo": "Save up to",
+    "minOrder": "Min.",
+    "max": "Max",
+    "newUser": "New User",
+    "freeShipping": "Free Shipping",
+    "copyApply": "Copy & Apply",
+    "copied": "Copied!",
+    "codeCopied": "Code copied!",
+    "tip": "Copy the code and paste it at checkout",
+    "needMore": "Need ${{amount}} more"
+  },
+  "priceAlert": {
+    "title": "Price Alert",
+    "subtitle": "Get notified when the price drops",
+    "currentPrice": "Current",
+    "targetPrice": "Target Price",
+    "youSave": "You save",
+    "setAlert": "Set price alert",
+    "hasAlert": "Price alert set (right-click to remove)",
+    "active": "Alert Active",
+    "notifyMe": "Notify Me",
+    "orSave": "Or save",
+    "info": "We'll check the price every hour and notify you when it drops below your target.",
+    "update": "Update Alert",
+    "create": "Create Alert",
+    "priceDropTitle": "💰 Price Drop Alert!",
+    "priceDropMessage": "{0}... is now {1} (was {2}, save {3})",
+    "viewProduct": "View Product",
+    "alerts": "Price Alerts",
+    "noAlerts": "No price alerts set",
+    "addAlert": "Add Price Alert",
+    "removeAlert": "Remove Alert",
+    "targetReached": "Target price reached!",
+    "saving": "Saving...",
+    "saved": "Saved!",
+    "settings": {
+      "title": "Alert Settings",
+      "enabled": "Enable price alerts",
+      "interval": "Check interval (minutes)",
+      "minDrop": "Minimum drop % for notification",
+      "maxPerDay": "Max notifications per day"
+    }
+  },
+  "cart": {
+    "title": "Your Cart",
+    "empty": "Your cart is empty",
+    "emptySubtext": "Add items to see savings opportunities",
+    "itemCount": "{{count}} items",
+    "itemCount_one": "1 item",
+    "total": "Total: ${{amount}}",
+    "potentialSavings": "Save up to ${{amount}}",
+    "savingsOpportunity": "Savings Opportunity!",
+    "couldSave": "You could save up to ${{amount}} on these items",
+    "findCheaper": "Find Cheaper",
+    "findSimilar": "Find Similar",
+    "saveOnAll": "Save on All Items",
+    "itemSavings": "Save ${{amount}}",
+    "swap": "Swap",
+    "cheaperAlternative": "Cheaper Alternative Found",
+    "swapSuccess": "Item swapped successfully!",
+    "checking": "Checking for better prices...",
+    "noSavings": "No cheaper alternatives found",
+    "quantity": "Qty: {{count}}"
+  },
+  "insights": {
+    "noReviews": "No reviews available",
+    "analyzing": "Analyzing reviews...",
+    "processing": "Processing {{count}} reviews",
+    "error": "Failed to analyze reviews",
+    "retry": "Try Again",
+    "satisfaction": "Customer Satisfaction",
+    "totalReviews": "{{count}} reviews analyzed",
+    "pros": "Pros",
+    "cons": "Cons",
+    "verdict": "Verdict",
+    "defaultPro": "Generally positive reviews",
+    "noCons": "No major issues reported",
+    "verdicts": {
+      "highlyRecommended": "Highly recommended",
+      "mixed": "Mixed reviews - consider alternatives",
+      "caution": "Proceed with caution"
+    },
+    "showReviews": "View Raw Reviews",
+    "hideReviews": "Hide Raw Reviews",
+    "accuracy": "Accuracy",
+    "basedOn": "Based on {{count}} reviews"
+  },
+  "shipping": {
+    "noProductData": "No product data available",
+    "totalLandedCost": "Total Landed Cost",
+    "includesTaxes": "Includes taxes & customs",
+    "quantity": "Quantity",
+    "costBreakdown": "Cost Breakdown",
+    "subtotal": "Subtotal",
+    "taxesAndFees": "Taxes & Fees",
+    "shippingOptions": "Shipping Options",
+    "bestValue": "Best Value",
+    "free": "FREE",
+    "taxFreeThreshold": "Tax-free threshold",
+    "estimatedDelivery": "Estimated Delivery",
+    "deliveryTime": "{{min}}-{{max}} days",
+    "standardShipping": "Standard Shipping",
+    "expressShipping": "Express Shipping",
+    "freeShipping": "Free Shipping",
+    "disclaimer": "Estimated cost. Final price may vary by local authorities.",
+    "customsWarning": "Careful! Close to customs threshold.",
+    "customsThresholdReached": "Customs threshold reached. Taxes will apply.",
+    "savingsOpportunity": "Savings Opportunity",
+    "addMoreToTrigger": "Adding more items may trigger customs fees."
+  },
+  "share": {
+    "share": "Share",
+    "shareProduct": "Share Product",
+    "generating": "Generating link...",
+    "copyLink": "Copy Link",
+    "copyWithMessage": "Copy with Message",
+    "copied": "Copied!",
+    "showQR": "Show QR Code",
+    "hideQR": "Hide QR Code",
+    "scanToOpen": "Scan to open on mobile",
+    "shareOnWhatsApp": "Share on WhatsApp",
+    "shareOnTelegram": "Share on Telegram",
+    "linkNote": "Clean link - no tracking parameters",
+    "linkCopied": "Link copied to clipboard",
+    "messageCopied": "Message copied to clipboard",
+    "shareMessage": "Check this out! 🎁\n\n{title} - {price}\n\n{link}"
+  },
+  "trends": {
+    "analyzing": "Analyzing market trends...",
+    "noData": "Insufficient data for trend analysis",
+    "priceTrend": "Price Trend Analysis",
+    "vsMarket": "vs Market Average",
+    "thisProduct": "This Product",
+    "marketAverage": "Market Average",
+    "change30d": "30-Day Change",
+    "volatility": "Volatility",
+    "confidence": "Confidence",
+    "buyingAdvice": {
+      "buy": "Great time to buy",
+      "wait": "Consider waiting",
+      "neutral": "Fair price"
+    },
+    "showDetails": "Show Market Details",
+    "hideDetails": "Hide Details",
+    "similarProducts": "Similar Products Compared",
+    "disclaimer": "Based on historical data. Past performance does not guarantee future results.",
+    "marketStatus": {
+      "hot": "Hot Market 🔥",
+      "warming": "Warming Up ↗️",
+      "cold": "Cold Market ❄️",
+      "cooling": "Cooling Down ↘️",
+      "stable": "Stable Market 📊"
+    }
+  },
+  "savings": {
+    "title": "Your Savings",
+    "subtitle": "Smart shopping stats",
+    "loading": "Loading your savings...",
+    "noData": "No savings data yet",
+    "addDemo": "Add Demo Data",
+    "share": "Share",
+    "shareTitle": "Share Your Savings",
+    "shareText": "I saved ",
+    "shareText2": " with AliSmart!",
+    "download": "Download Image",
+    "totalSaved": "Total Saved",
+    "lifetime": "Lifetime savings with AliSmart",
+    "smartChoices": "Smart Choices",
+    "couponsUsed": "Coupons Used",
+    "couponsFound": "Coupons Found",
+    "tracked": "Products Tracked",
+    "weeklyActivity": "Weekly Activity",
+    "saved": "Saved",
+    "achievements": "Achievements",
+    "noAchievements": "Keep shopping to unlock achievements!"
+  },
+  "currency": {
+    "title": "Currency Converter",
+    "rate": "Rate",
+    "localCurrency": "Local Currency",
+    "bankFee": "Bank Conversion Fee",
+    "original": "Original",
+    "finalPrice": "Final Price",
+    "includesFee": "Includes {{fee}}% bank fee",
+    "converted": "Converted",
+    "bankFeeAmount": "Bank Fee",
+    "noPrice": "Select a product to see conversion",
+    "disclaimer": "Exchange rate is for estimation only. Actual rate depends on settlement date."
+  },
+  "filter": {
+    "safeMode": "Safe Browsing Mode",
+    "safeModeDesc": "Blur sensitive content automatically",
+    "contentHidden": "Content Hidden",
+    "tapToShow": "Tap to show",
+    "showAnyway": "Show Anyway",
+    "showAllImages": "Show All Images",
+    "suspiciousReview": "Suspicious Review Hidden",
+    "potentiallyAutomated": "This review appears to be potentially automated or spam.",
+    "anonymous": "Anonymous",
+    "verifiedPurchase": "Verified Purchase",
+    "verifiedReview": "Verified Review",
+    "checkReview": "Check Review",
+    "flag": {
+      "too_short": "Short Review",
+      "no_content": "No Detail",
+      "duplicate": "Duplicate",
+      "spam_pattern": "Spam Pattern",
+      "generic_username": "Generic User"
+    }
+  },
+  "inventory": {
+    "title": "Inventory Status",
+    "warehouseChecked": "Warehouse data checked",
+    "unavailable": "Stock status unavailable",
+    "units": "units",
+    "outOfStock": "Out of Stock",
+    "lowStock": "Low Stock",
+    "limited": "Limited Stock",
+    "moderate": "Moderate Stock",
+    "plenty": "Plenty in Stock",
+    "fakeUrgency": "Marketing Tactics Detected",
+    "hideVariants": "Hide Variants",
+    "showVariants": "Show {{count}} Variants",
+    "inStock": "in stock",
+    "out": "Out",
+    "tooltip": "We checked the warehouse data: {{count}} units actually available."
+  },
+  "address": {
+    "vaultTitle": "Address Vault",
+    "fullName": "Full Name",
+    "phone": "Phone",
+    "email": "Email",
+    "streetAddress": "Street Address",
+    "apartment": "Apartment, Suite, Building",
+    "city": "City",
+    "state": "State/Province",
+    "zipCode": "Zip Code",
+    "country": "Country",
+    "taxId": "Israeli ID Number",
+    "taxIdPlaceholder": "9 digits for customs",
+    "deliveryNotes": "Delivery Notes",
+    "saveSecurely": "Save Securely",
+    "autoFill": "Fill Address Automatically",
+    "privacyNotice": "Your data is encrypted and stored locally only",
+    "required": "Required",
+    "saved": "Address saved securely 🔒",
+    "clearData": "Clear Data",
+    "taxIdHelp": "Required by Israeli Customs to release packages. Enter your 9-digit Israeli ID number (Teudat Zehut).",
+    "zipCodeHelp": "7 digits for Israel",
+    "magicFill": "Fill Address Automatically",
+    "fillSuccess": "Address Filled!",
+    "noAddress": "Please save your address in the AliSmart sidebar first!"
+  },
+  "aiAdvisor": {
+    "title": "AI Deal Advisor",
+    "analyzing": "AI Analyzing Market Data...",
+    "analyzingSub": "Checking price history, sales calendar, and seller patterns",
+    "dealScore": "Deal Score",
+    "expertVerdict": "AI Expert Verdict",
+    "highConfidence": "High Confidence",
+    "mediumConfidence": "Medium Confidence",
+    "lowConfidence": "Low Confidence",
+    "tiers": {
+      "golden": "Golden Deal",
+      "excellent": "Excellent",
+      "fair": "Fair Price",
+      "wait": "Wait & See",
+      "avoid": "Overpriced"
+    },
+    "current": "Current",
+    "average": "Average (30d)",
+    "lowest": "Lowest",
+    "savingsPotential": "Save up to ${{amount}} if you wait",
+    "pinPrice": "Pin This Price",
+    "unpinPrice": "Unpin Price",
+    "pinnedAt": "Pinned at ${{price}}",
+    "alertWhenBelow": "Alert when below ${{price}}",
+    "showDetails": "Show Analysis Details",
+    "hideDetails": "Hide Analysis Details",
+    "analysisFactors": "Analysis Factors",
+    "sellerBehavior": "Seller Price Behavior",
+    "upcomingSales": "Upcoming Sales",
+    "recommendations": {
+      "buyNow": "Golden Deal! Price is at or near all-time low. Buy now!",
+      "goodDeal": "Good deal - {{percent}}% below average price.",
+      "fairPrice": "Fair price - close to historical average.",
+      "wait": "Consider waiting - price may drop soon based on historical patterns.",
+      "strongWait": "Overpriced by {{percent}}%. Wait for a sale."
+    },
+    "factors": {
+      "priceAboveAverage": "Current price is above 30-day average",
+      "priceBelowAverage": "Price is below average - good deal",
+      "nearAllTimeLow": "Near all-time lowest price",
+      "nearAllTimeHigh": "Near all-time highest price",
+      "saleApproaching": "Major sale approaching within 7 days",
+      "saleImminent": "Sale starts very soon",
+      "highManipulation": "Seller shows price manipulation patterns",
+      "stablePrice": "Price is historically stable",
+      "highShipping": "High shipping cost affects value"
+    }
+  },
+  "comparison": {
+    "title": "Competitive Matrix",
+    "found": "found",
+    "filters": {
+      "freeShipping": "Free Shipping",
+      "topRated": "Top Rated 4.8+",
+      "choiceOnly": "Choice Only",
+      "eliteOnly": "Elite Only"
+    },
+    "table": {
+      "rank": "#",
+      "product": "Product",
+      "price": "Price",
+      "delivery": "Delivery",
+      "score": "Value Score",
+      "empty": "Better deals will appear here"
+    },
+    "badges": {
+      "cheapest": "Cheapest",
+      "fastest": "Fastest Shipping",
+      "trusted": "Most Trusted",
+      "freeShipping": "Free Shipping",
+      "choice": "Choice",
+      "elite": "Elite Pick"
+    },
+    "actions": {
+      "goToDeal": "Go to Deal",
+      "showDetails": "Show Details",
+      "hideDetails": "Hide Details"
+    },
+    "scoreBreakdown": {
+      "price": "Price",
+      "reliability": "Reliability",
+      "shipping": "Shipping",
+      "trust": "Trust",
+      "max": "/100"
+    },
+    "sellerInfo": {
+      "rating": "Seller Rating",
+      "feedback": "Feedback",
+      "storeAge": "Store Age",
+      "orders": "Orders"
+    },
+    "footer": "Showing top {count} elite competitors based on Golden Score algorithm",
+    "emptyState": {
+      "title": "Better Deals Found",
+      "description": "Browse AliExpress products to see competitive alternatives ranked by value"
+    },
+    "loading": "Building competitive matrix..."
+  },
+  "voucherSniper": {
+    "title": "Hidden Voucher Sniper",
+    "scanning": "Sniper Mode Active...",
+    "scanningSub": "Scanning store API for hidden vouchers",
+    "found": "found",
+    "tabs": {
+      "hidden": "Hidden Deals",
+      "combos": "Golden Combos"
+    },
+    "magicCodes": "Magic Codes",
+    "goldenCombo": "The Golden Combo",
+    "comboDesc": "Best voucher combinations that can stack together",
+    "voucherTypes": {
+      "follower": "Follower",
+      "threshold": "Threshold",
+      "platform": "Platform",
+      "cashback": "Cashback"
+    },
+    "off": "OFF",
+    "minOrder": "Min. ${amount} order",
+    "daysLeft": "{days} days left",
+    "expired": "Expired",
+    "unknownExpiry": "Unknown expiry",
+    "saveAmount": "Save ${amount} on your order",
+    "needMore": "Add ${amount} more",
+    "applied": "Applied",
+    "selected": "{count} selected",
+    "potentialSavings": "Save up to ${amount}",
+    "actions": {
+      "applySelected": "Apply Selected",
+      "autoApplyAll": "Auto-Apply All ({count} codes)",
+      "testingCodes": "Testing Codes...",
+      "selectCombo": "Select This Combo"
+    },
+    "success": {
+      "title": "Hidden Deal Found!",
+      "voucherApplied": "Hidden ${amount} voucher applied successfully",
+      "autoApplied": "Auto-applied best voucher: {code} (-${amount})"
+    },
+    "emptyState": {
+      "title": "Hidden Voucher Sniper",
+      "description": "View a product from an AliExpress store to scan for hidden coupons"
+    },
+    "noVouchers": "No hidden vouchers found for this store",
+    "noCombos": "No stackable combos found. Try individual vouchers.",
+    "footer": "Scans store API, follower coupons & hidden thresholds"
+  },
+  "sellerRadar": {
+    "title": "Elite Seller Radar",
+    "scanning": "Scanning Seller Profile...",
+    "scanningSub": "Analyzing 3 years of transaction data",
+    "trustScore": "Trust Score",
+    "statusBadges": {
+      "elite": "Elite Store",
+      "trusted": "Trusted Merchant",
+      "emerging": "Emerging Store",
+      "warning": "Caution Advised",
+      "danger": "High Risk"
+    },
+    "metrics": {
+      "weeksActive": "Weeks Active",
+      "totalSales": "Total Sales",
+      "positive": "Positive",
+      "rating": "Rating"
+    },
+    "riskAlerts": "Risk Alerts",
+    "alertsTitle": "Risk Alerts ({count})",
+    "riskFactors": {
+      "ghostStore": {
+        "title": "Potential Ghost Store",
+        "description": "Store opened {weeks} weeks ago with {sales} sales"
+      },
+      "volumeAnomaly": {
+        "title": "Unusual Sales Volume",
+        "description": "High sales volume for a new store"
+      },
+      "reviewBurst": {
+        "title": "Suspicious Review Pattern",
+        "description": "{count} reviews in one week (possible bots)"
+      },
+      "priceManipulation": {
+        "title": "Price Manipulation Detected",
+        "description": "Seller raised price by {percent}% recently"
+      },
+      "poorCommunication": {
+        "title": "Slow Communication",
+        "description": "Only {rate}% response rate"
+      },
+      "lowFeedback": {
+        "title": "Poor Feedback Score",
+        "description": "Only {percent}% positive feedback"
+      }
+    },
+    "categoryComparison": "vs. Category Average",
+    "positiveIndicators": "Trust Indicators",
+    "warnings": "Notes",
+    "recommendations": {
+      "avoid": "Avoid this seller. Multiple high-risk indicators detected.",
+      "caution": "Proceed with caution. Review risk factors before purchasing.",
+      "check": "Generally reliable but check specific warnings.",
+      "safe": "Safe to purchase. Seller shows strong trust indicators."
+    },
+    "emptyState": {
+      "title": "Elite Seller Radar",
+      "description": "View an AliExpress product to analyze seller integrity and detect risks"
+    },
+    "footer": "Analysis based on {count} transactions"
+  },
+  "pricePopup": {
+    "saveNow": "Save Now",
+    "viewDeal": "View Deal",
+    "bestPrice": "Best price found!",
+    "foundInSearch": "found in our search.",
+    "savePrefix": "Save",
+    "currentBestMessage": "is currently the best available price."
+  },
+  "wishlist": {
+    "title": "Smart Wishlist",
+    "newCollection": "New Collection",
+    "allItems": "All Items",
+    "items": "items",
+    "item": "item",
+    "total": "Total",
+    "priceDropped": "cheaper than last week",
+    "priceIncreased": "more expensive than last week",
+    "empty": "No items in this collection",
+    "emptyHint": "Click the heart icon on any product to add it here",
+    "addTitle": "Add to Wishlist",
+    "selectCollection": "Select a collection",
+    "createCollection": "Create New Collection",
+    "collectionName": "Collection name (e.g., 'Tech Gadgets')",
+    "cancel": "Cancel",
+    "create": "Create",
+    "shareCollection": "Share Collection",
+    "linkCopied": "Link copied!",
+    "syncing": "Syncing...",
+    "added": "Added to wishlist",
+    "removed": "Removed from wishlist",
+    "alreadyExists": "Item already in wishlist",
+    "viewProduct": "View product",
+    "remove": "Remove from wishlist",
+    "dropAlert": "Price dropped by {percent}%!",
+    "collectionStats": "{count} items • ${value} total"
+  },
+  "checkoutOptimizer": {
+    "title": "Smart Checkout",
+    "scanning": "Scanning your cart...",
+    "analyzing": "Finding best deals...",
+    "error": "Could not analyze cart",
+    "retry": "Try Again",
+    "potentialSavings": "Potential Savings",
+    "addMoreToSave": "Add ${amount} to save ${save}",
+    "thresholdDesc": "You're ${gap} away from unlocking a ${coupon} coupon",
+    "applyCoupon": "Apply: {code} (-${amount})",
+    "couponDesc": "Min. order ${min}",
+    "useCoins": "Use {coins} coins → Save ${save}",
+    "coinsDesc": "Exchange rate: {rate}/coin",
+    "itemCoins": "Max coins on \"{item}\"",
+    "itemCoinsDesc": "Extra ${discount} off this item",
+    "stackVouchers": "Stack {count} vouchers → Save ${save}",
+    "stackDesc": "Combine {codes} for max savings",
+    "customsWarning": "⚠️ Customs Tax Risk",
+    "customsDesc": "Cart exceeds $75 tax-free limit. Expect ~17% VAT + fees.",
+    "customsAlert": "Near customs threshold - taxes may apply",
+    "alreadyOptimized": "Your cart is already optimized!",
+    "optimizationsFound": "Ways to Save",
+    "apply": "Apply",
+    "applied": "Applied ✓",
+    "autoOptimize": "Optimize My Cart",
+    "optimizing": "Applying optimizations...",
+    "footerInfo": "Analysis based on current cart contents and available promotions",
+    "dealGrade": {
+      "excellent": "Excellent Deal",
+      "great": "Great Deal",
+      "good": "Good Deal",
+      "fair": "Fair Deal",
+      "poor": "Poor Deal"
+    }
+  }
+}

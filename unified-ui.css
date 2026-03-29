@@ -1,0 +1,792 @@
+/**
+ * AliSmart Unified UI CSS
+ * WORLD-CLASS PREMIUM Design System
+ * Coral-to-Purple gradient theme with GitHub Dark aesthetics
+ */
+
+/* ─── CSS Variables (Premium Design) ───────────────────────────────── */
+:root {
+  /* Premium Gradient - Coral to Purple */
+  --as-primary: #ff6b6b;
+  --as-secondary: #f06595;
+  --as-tertiary: #cc5de8;
+  --as-gradient: linear-gradient(135deg, #ff6b6b 0%, #f06595 50%, #cc5de8 100%);
+  --as-gradient-soft: linear-gradient(135deg, rgba(255,107,107,0.9) 0%, rgba(240,101,149,0.9) 50%, rgba(204,93,232,0.9) 100%);
+  --as-gradient-hover: linear-gradient(135deg, #ff8585 0%, #f585b0 50%, #d97af0 100%);
+  
+  /* GitHub Dark Backgrounds */
+  --as-bg-dark: #0d1117;
+  --as-bg-darker: #161b22;
+  --as-bg-card: #21262d;
+  --as-bg-hover: rgba(139, 148, 158, 0.1);
+  
+  /* Premium Text */
+  --as-text-primary: #f0f6fc;
+  --as-text-secondary: #8b949e;
+  --as-text-muted: #6e7681;
+  --as-text-dim: #484f58;
+  
+  /* Success & Status */
+  --as-success: #3fb950;
+  --as-warning: #d29922;
+  --as-error: #f85149;
+  --as-blue: #58a6ff;
+  
+  /* Subtle Borders */
+  --as-border: rgba(139, 148, 158, 0.2);
+  --as-border-light: rgba(139, 148, 158, 0.1);
+  --as-border-hover: rgba(240, 101, 149, 0.3);
+  
+  /* Premium Spacing */
+  --as-spacing-xs: 4px;
+  --as-spacing-sm: 8px;
+  --as-spacing-md: 16px;
+  --as-spacing-lg: 24px;
+  
+  /* Premium Radius */
+  --as-radius-sm: 8px;
+  --as-radius-md: 12px;
+  --as-radius-lg: 16px;
+  --as-radius-xl: 9999px;
+  
+  /* Premium Shadows */
+  --as-shadow-sm: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --as-shadow-md: 0 8px 24px rgba(0, 0, 0, 0.4);
+  --as-shadow-lg: 0 12px 40px rgba(0, 0, 0, 0.5);
+  --as-glow-accent: 0 0 20px rgba(240, 101, 149, 0.3);
+  --as-glow-success: 0 0 20px rgba(63, 185, 80, 0.3);
+  
+  /* Z-Index Scale */
+  --as-z-base: 2147483600;
+  --as-z-button: 2147483647;
+  --as-z-sidebar: 2147483646;
+  
+  /* Smooth Transitions */
+  --as-transition-fast: all 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+  --as-transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  --as-transition-slow: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* ─── Root Container (Isolation Layer) ────────────────────────────────── */
+#alismart-root-container {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100vw !important;
+  height: 100vh !important;
+  z-index: var(--as-z-base) !important;
+  pointer-events: none !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  border: none !important;
+  background: transparent !important;
+  overflow: visible !important;
+}
+
+#alismart-root-container * {
+  pointer-events: auto !important;
+  box-sizing: border-box !important;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif !important;
+}
+
+/* ─── Floating Action Button — WORLD CLASS PREMIUM ──────────────────────── */
+.alismart-action-btn,
+[data-alismart-btn] {
+  position: fixed !important;
+  z-index: var(--as-z-button) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  width: 48px !important;
+  height: 48px !important;
+  border-radius: 50% !important;
+  background: var(--as-gradient) !important;
+  box-shadow: 
+    0 4px 20px rgba(240, 101, 149, 0.4),
+    0 0 0 1px rgba(255,255,255,0.15) inset,
+    0 2px 4px rgba(0,0,0,0.2) !important;
+  border: none !important;
+  cursor: pointer !important;
+  transition: var(--as-transition-smooth) !important;
+  backdrop-filter: blur(10px) saturate(180%) !important;
+  -webkit-backdrop-filter: blur(10px) saturate(180%) !important;
+  overflow: visible !important;
+  transform: translateZ(0) !important;
+  will-change: transform !important;
+}
+
+/* Premium shine effect */
+.alismart-action-btn::before,
+[data-alismart-btn]::before {
+  content: '' !important;
+  position: absolute !important;
+  top: -50% !important;
+  left: -50% !important;
+  width: 200% !important;
+  height: 200% !important;
+  background: linear-gradient(
+    45deg,
+    transparent 40%,
+    rgba(255,255,255,0.15) 50%,
+    transparent 60%
+  ) !important;
+  transform: rotate(45deg) translateY(-100%) !important;
+  transition: transform 0.6s ease !important;
+  pointer-events: none !important;
+}
+
+.alismart-action-btn:hover::before,
+[data-alismart-btn]:hover::before {
+  transform: rotate(45deg) translateY(100%) !important;
+}
+
+.alismart-action-btn:hover,
+[data-alismart-btn]:hover {
+  transform: scale(1.12) translateY(-2px) !important;
+  box-shadow: 
+    0 8px 30px rgba(240, 101, 149, 0.5),
+    0 0 0 2px rgba(255,255,255,0.25) inset,
+    0 4px 8px rgba(0,0,0,0.25) !important;
+  background: var(--as-gradient-hover) !important;
+}
+
+.alismart-action-btn:active,
+[data-alismart-btn]:active {
+  transform: scale(0.95) !important;
+  box-shadow: 
+    0 2px 10px rgba(240, 101, 149, 0.3),
+    0 0 0 1px rgba(255,255,255,0.1) inset !important;
+}
+
+/* Premium pulse animation on load */
+@keyframes premiumPulse {
+  0%, 100% { 
+    box-shadow: 
+      0 4px 20px rgba(240, 101, 149, 0.4),
+      0 0 0 1px rgba(255,255,255,0.15) inset;
+  }
+  50% { 
+    box-shadow: 
+      0 6px 30px rgba(240, 101, 149, 0.6),
+      0 0 0 2px rgba(255,255,255,0.2) inset,
+      0 0 20px rgba(255, 107, 107, 0.4);
+  }
+}
+
+.alismart-action-btn[data-new="true"],
+[data-alismart-btn][data-new="true"] {
+  animation: premiumPulse 2s ease-in-out infinite !important;
+}
+
+.alismart-action-btn:active,
+[data-alismart-btn]:active {
+  transform: scale(0.95) !important;
+}
+
+/* Show on product hover */
+[data-alismart-processed="true"]:hover .alismart-action-btn,
+[data-alismart-processed="true"]:hover [data-alismart-btn] {
+  opacity: 1 !important;
+}
+
+/* ─── Sidebar ───────────────────────────────────────────────────────── */
+#ali-smart-sidebar {
+  position: fixed !important;
+  top: 0 !important;
+  right: -420px !important;
+  width: 400px !important;
+  height: 100vh !important;
+  background: #1a1a2e !important;
+  border-left: 1px solid #3a3a5c !important;
+  box-shadow: -4px 0 16px rgba(0, 0, 0, 0.5) !important;
+  z-index: var(--as-z-sidebar) !important;
+  transition: right 0.3s ease !important;
+  display: flex !important;
+  flex-direction: column !important;
+  overflow: hidden !important;
+}
+
+#ali-smart-sidebar.open {
+  right: 0 !important;
+}
+
+/* Sidebar Header */
+.as-header {
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  padding: 16px 20px !important;
+  background: #ff6a00 !important;
+  border-bottom: none !important;
+  flex-shrink: 0 !important;
+}
+
+.as-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: 8px !important;
+  font-size: 18px !important;
+  font-weight: 700 !important;
+  color: white !important;
+}
+
+.as-close-btn {
+  width: 32px !important;
+  height: 32px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background: rgba(0,0,0,0.2) !important;
+  border: none !important;
+  border-radius: 6px !important;
+  color: white !important;
+  font-size: 20px !important;
+  cursor: pointer !important;
+  transition: background 0.2s !important;
+}
+
+.as-close-btn:hover {
+  background: rgba(0,0,0,0.3) !important;
+}
+
+/* Sidebar Content */
+.as-content {
+  flex: 1 !important;
+  overflow-y: auto !important;
+  padding: var(--as-spacing-md) !important;
+}
+
+.as-content::-webkit-scrollbar {
+  width: 6px !important;
+}
+
+.as-content::-webkit-scrollbar-track {
+  background: transparent !important;
+}
+
+.as-content::-webkit-scrollbar-thumb {
+  background: var(--as-glass-bg) !important;
+  border-radius: var(--as-radius-xl) !important;
+}
+
+/* ─── Toggle Button ─────────────────────────────────────────────────── */
+#ali-smart-toggle {
+  position: fixed !important;
+  top: 50% !important;
+  right: 0 !important;
+  transform: translateY(-50%) !important;
+  z-index: var(--as-z-sidebar) !important;
+  cursor: pointer !important;
+  transition: all 0.3s ease !important;
+}
+
+#ali-smart-toggle.hidden {
+  opacity: 0 !important;
+  pointer-events: none !important;
+  right: -60px !important;
+}
+
+.as-toggle-inner {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--as-spacing-xs) !important;
+  padding: 12px 16px !important;
+  background: var(--as-gradient-soft) !important;
+  color: white !important;
+  border-radius: var(--as-radius-md) 0 0 var(--as-radius-md) !important;
+  box-shadow: var(--as-shadow-glow) !important;
+  font-weight: 600 !important;
+  font-size: 13px !important;
+  backdrop-filter: var(--as-glass-blur) !important;
+  -webkit-backdrop-filter: var(--as-glass-blur) !important;
+}
+
+.as-toggle-inner:hover {
+  padding-right: 24px !important;
+  box-shadow: var(--as-shadow-glow-hover) !important;
+}
+
+/* ─── Top Popup / Header ──────────────────────────────────────────────── */
+.alismart-top-popup,
+#alismart-popup,
+.alismart-header {
+  position: fixed !important;
+  top: 16px !important;
+  left: 50% !important;
+  transform: translateX(-50%) !important;
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: var(--as-glass-blur) !important;
+  -webkit-backdrop-filter: var(--as-glass-blur) !important;
+  border-radius: var(--as-radius-lg) !important;
+  padding: 12px 24px !important;
+  box-shadow: var(--as-shadow-md), 0 0 0 1px rgba(0,0,0,0.05) !important;
+  z-index: var(--as-z-popup) !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--as-spacing-md) !important;
+  min-width: 300px !important;
+  max-width: 600px !important;
+}
+
+.alismart-header-logo {
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--as-spacing-sm) !important;
+  font-size: 16px !important;
+  font-weight: 700 !important;
+  background: var(--as-gradient) !important;
+  -webkit-background-clip: text !important;
+  background-clip: text !important;
+  -webkit-text-fill-color: transparent !important;
+}
+
+.alismart-search-bar {
+  flex: 1 !important;
+  display: flex !important;
+  align-items: center !important;
+  gap: var(--as-spacing-sm) !important;
+  padding: 8px 16px !important;
+  background: rgba(0, 0, 0, 0.05) !important;
+  border-radius: var(--as-radius-xl) !important;
+  border: 1px solid transparent !important;
+  transition: all 0.2s ease !important;
+}
+
+.alismart-search-bar:focus-within {
+  background: white !important;
+  border-color: var(--as-primary) !important;
+  box-shadow: 0 0 0 3px rgba(255, 106, 0, 0.1) !important;
+}
+
+.alismart-search-bar input {
+  border: none !important;
+  background: transparent !important;
+  outline: none !important;
+  font-size: 14px !important;
+  width: 100% !important;
+  color: #333 !important;
+}
+
+.alismart-search-bar input::placeholder {
+  color: #999 !important;
+}
+
+/* ─── Checkout Bar ──────────────────────────────────────────────────── */
+#alismart-checkout-bar {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  right: 0 !important;
+  z-index: var(--as-z-button) !important;
+  background: var(--as-bg-dark) !important;
+  backdrop-filter: var(--as-glass-blur) !important;
+  -webkit-backdrop-filter: var(--as-glass-blur) !important;
+  border-bottom: 1px solid var(--as-glass-border) !important;
+  padding: 12px 20px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: space-between !important;
+  gap: var(--as-spacing-md) !important;
+  box-shadow: var(--as-shadow-md) !important;
+  animation: slideDown 0.4s cubic-bezier(0.4, 0, 0.2, 1) !important;
+}
+
+@keyframes slideDown {
+  from { transform: translateY(-100%); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+.alismart-bar-logo {
+  width: 28px !important;
+  height: 28px !important;
+  background: var(--as-gradient) !important;
+  border-radius: var(--as-radius-sm) !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  color: white !important;
+  font-weight: 700 !important;
+  font-size: 12px !important;
+}
+
+.alismart-bar-grade-badge {
+  padding: 4px 10px !important;
+  border-radius: var(--as-radius-sm) !important;
+  font-size: 13px !important;
+  font-weight: 700 !important;
+  color: white !important;
+}
+
+.alismart-bar-grade-badge.grade-a {
+  background: var(--as-success) !important;
+}
+
+.alismart-bar-grade-badge.grade-b {
+  background: var(--as-warning) !important;
+}
+
+.alismart-bar-grade-badge.grade-c {
+  background: var(--as-primary) !important;
+}
+
+.alismart-bar-grade-badge.grade-d {
+  background: var(--as-secondary) !important;
+}
+
+.alismart-bar-savings {
+  color: var(--as-success) !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.alismart-bar-action {
+  padding: 8px 18px !important;
+  background: var(--as-gradient) !important;
+  border: none !important;
+  border-radius: var(--as-radius-sm) !important;
+  color: white !important;
+  font-size: 13px !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  transition: all 0.2s ease !important;
+}
+
+.alismart-bar-action:hover {
+  transform: translateY(-1px) !important;
+  box-shadow: var(--as-shadow-glow) !important;
+}
+
+/* ─── Display Modes ──────────────────────────────────────────────────── */
+
+/* Hover Only Mode */
+.alismart-display-hover .alismart-action-btn,
+.alismart-display-hover [data-alismart-btn] {
+  opacity: 0 !important;
+  transition: opacity 0.2s ease !important;
+}
+
+.alismart-display-hover .alismart-action-btn:hover,
+.alismart-display-hover [data-alismart-btn]:hover,
+[data-alismart-processed="true"]:hover .alismart-action-btn,
+[data-alismart-processed="true"]:hover [data-alismart-btn] {
+  opacity: 1 !important;
+}
+
+/* Always On Mode */
+.alismart-display-on .alismart-action-btn,
+.alismart-display-on [data-alismart-btn] {
+  opacity: 1 !important;
+}
+
+/* Off Mode */
+.alismart-display-off .alismart-action-btn,
+.alismart-display-off [data-alismart-btn] {
+  display: none !important;
+  visibility: hidden !important;
+  opacity: 0 !important;
+}
+
+/* ─── Overflow Fixes ─────────────────────────────────────────────────── */
+/* Ensure product cards don't clip our buttons */
+[data-pl], 
+[data-product-id], 
+.search-item, 
+.search-card-item, 
+.list-item, 
+.product-item, 
+.product-card, 
+[class*="ProductCard"],
+[class*="product-card"],
+[class*="ProductContainer"] {
+  overflow: visible !important;
+  position: relative !important;
+}
+
+/* Button container for isolation */
+.alismart-button-container {
+  position: absolute !important;
+  z-index: var(--as-z-button) !important;
+  overflow: visible !important;
+  pointer-events: none !important;
+}
+
+.alismart-button-container > * {
+  pointer-events: auto !important;
+}
+
+/* ─── RTL Support ────────────────────────────────────────────────────── */
+html[dir="rtl"] .alismart-action-btn,
+html[dir="rtl"] [data-alismart-btn],
+html[lang="he"] .alismart-action-btn,
+html[lang="he"] [data-alismart-btn],
+html[lang="ar"] .alismart-action-btn,
+html[lang="ar"] [data-alismart-btn] {
+  right: auto !important;
+  left: 8px !important;
+}
+
+html[dir="rtl"] #ali-smart-sidebar,
+html[lang="he"] #ali-smart-sidebar,
+html[lang="ar"] #ali-smart-sidebar {
+  right: auto !important;
+  left: -420px !important;
+  border-left: none !important;
+  border-right: 1px solid var(--as-glass-border) !important;
+}
+
+html[dir="rtl"] #ali-smart-sidebar.open,
+html[lang="he"] #ali-smart-sidebar.open,
+html[lang="ar"] #ali-smart-sidebar.open {
+  left: 0 !important;
+  right: auto !important;
+}
+
+html[dir="rtl"] #ali-smart-toggle,
+html[lang="he"] #ali-smart-toggle,
+html[lang="ar"] #ali-smart-toggle {
+  right: auto !important;
+  left: 0 !important;
+}
+
+html[dir="rtl"] .as-toggle-inner,
+html[lang="he"] .as-toggle-inner,
+html[lang="ar"] .as-toggle-inner {
+  border-radius: 0 var(--as-radius-md) var(--as-radius-md) 0 !important;
+}
+
+/* ─── Animations ──────────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulse {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.05); }
+}
+
+.as-fade-in {
+  animation: fadeIn 0.3s ease !important;
+}
+
+/* ─── Skeleton Loading ────────────────────────────────────────────────── */
+.as-skeleton {
+  background: var(--as-bg-card) !important;
+  border-radius: var(--as-radius-md) !important;
+  padding: var(--as-spacing-md) !important;
+  margin-bottom: var(--as-spacing-md) !important;
+}
+
+.as-skeleton-img {
+  width: 100% !important;
+  height: 120px !important;
+  background: linear-gradient(90deg, var(--as-bg-card) 25%, var(--as-bg-hover) 50%, var(--as-bg-card) 75%) !important;
+  background-size: 200% 100% !important;
+  border-radius: var(--as-radius-sm) !important;
+  animation: skeleton-shimmer 1.5s infinite !important;
+}
+
+.as-skeleton-line {
+  height: 12px !important;
+  background: var(--as-bg-card) !important;
+  border-radius: var(--as-radius-sm) !important;
+  margin-bottom: var(--as-spacing-sm) !important;
+  animation: skeleton-shimmer 1.5s infinite !important;
+}
+
+.as-skeleton-line.short {
+  width: 60% !important;
+}
+
+.as-skeleton-line.tiny {
+  width: 40% !important;
+  height: 8px !important;
+}
+
+@keyframes skeleton-shimmer {
+  0% { background-position: 200% 0; }
+  100% { background-position: -200% 0; }
+}
+
+/* ─── Premium Animations ───────────────────────────────────────────────── */
+@keyframes as-glow-pulse {
+  0%, 100% { box-shadow: 0 0 20px rgba(255, 106, 0, 0.3); }
+  50% { box-shadow: 0 0 40px rgba(238, 9, 121, 0.5); }
+}
+
+@keyframes as-shimmer {
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+@keyframes as-float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-6px); }
+}
+
+@keyframes as-gradient-shift {
+  0% { background-position: 0% 50%; }
+  50% { background-position: 100% 50%; }
+  100% { background-position: 0% 50%; }
+}
+
+@keyframes as-scale-in {
+  from { 
+    opacity: 0; 
+    transform: scale(0.9) translateY(10px); 
+  }
+  to { 
+    opacity: 1; 
+    transform: scale(1) translateY(0); 
+  }
+}
+
+/* ─── Product Cards in Sidebar ────────────────────────────────────────── */
+.as-product-card {
+  display: block !important;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.08) 0%, rgba(255, 255, 255, 0.03) 100%) !important;
+  border-radius: var(--as-radius-md) !important;
+  padding: var(--as-spacing-md) !important;
+  margin-bottom: var(--as-spacing-md) !important;
+  text-decoration: none !important;
+  color: inherit !important;
+  transition: all var(--as-transition-smooth) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  backdrop-filter: var(--as-glass-blur) !important;
+  -webkit-backdrop-filter: var(--as-glass-blur) !important;
+  position: relative !important;
+  overflow: hidden !important;
+}
+
+.as-product-card::before {
+  content: '' !important;
+  position: absolute !important;
+  inset: 0 !important;
+  background: var(--as-gradient-shimmer) !important;
+  transform: translateX(-100%) !important;
+  transition: transform 0.6s ease !important;
+  pointer-events: none !important;
+}
+
+.as-product-card:hover::before {
+  transform: translateX(100%) !important;
+  transition: transform 1s ease !important;
+}
+
+.as-product-card:hover {
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.12) 0%, rgba(255, 255, 255, 0.06) 100%) !important;
+  border-color: var(--as-glass-border-hover) !important;
+  transform: translateY(-3px) scale(1.02) !important;
+  box-shadow: var(--as-shadow-md), var(--as-glow-accent) !important;
+}
+
+.as-product-card.as-best-deal {
+  border-color: var(--as-success) !important;
+  background: linear-gradient(135deg, rgba(0, 208, 132, 0.1) 0%, rgba(0, 208, 132, 0.05) 100%) !important;
+  box-shadow: 0 0 20px rgba(0, 208, 132, 0.2) !important;
+}
+
+.as-product-card.as-best-deal:hover {
+  box-shadow: var(--as-shadow-md), var(--as-glow-success) !important;
+}
+
+/* Premium product link styling */
+.as-product-link {
+  text-decoration: none !important;
+  color: inherit !important;
+  position: relative !important;
+  display: block !important;
+}
+
+.as-product-link::after {
+  content: '' !important;
+  position: absolute !important;
+  bottom: -2px !important;
+  left: 0 !important;
+  width: 0 !important;
+  height: 2px !important;
+  background: var(--as-gradient) !important;
+  transition: width var(--as-transition-smooth) !important;
+}
+
+.as-product-card:hover .as-product-link::after {
+  width: 100% !important;
+}
+
+/* ─── Utility Classes ─────────────────────────────────────────────────── */
+.as-hidden {
+  display: none !important;
+}
+
+.as-invisible {
+  opacity: 0 !important;
+  pointer-events: none !important;
+}
+
+.as-visible {
+  opacity: 1 !important;
+  pointer-events: auto !important;
+}
+
+/* ─── Enhanced Icon Styling ──────────────────────────────────────────── */
+.alismart-action-btn svg,
+[data-alismart-btn] svg {
+  width: 22px !important;
+  height: 22px !important;
+  filter: drop-shadow(0 1px 2px rgba(0,0,0,0.2)) !important;
+  transition: transform 0.3s ease !important;
+}
+
+.alismart-action-btn:hover svg,
+[data-alismart-btn]:hover svg {
+  transform: scale(1.1) rotate(5deg) !important;
+}
+
+/* ─── Premium Badge/Counter ──────────────────────────────────────────── */
+.alismart-action-btn .badge,
+[data-alismart-btn] .badge {
+  position: absolute !important;
+  top: -4px !important;
+  right: -4px !important;
+  min-width: 18px !important;
+  height: 18px !important;
+  padding: 0 5px !important;
+  background: var(--as-success) !important;
+  color: white !important;
+  font-size: 10px !important;
+  font-weight: 700 !important;
+  border-radius: 9999px !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  box-shadow: 0 2px 8px rgba(63, 185, 80, 0.4) !important;
+  border: 2px solid var(--as-bg-dark) !important;
+  animation: badgeBounce 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55) !important;
+}
+
+@keyframes badgeBounce {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.2); }
+}
+
+/* ─── Magic Fill Button ───────────────────────────────────────────────── */
+#alismart-magic-fill {
+  position: fixed !important;
+  bottom: 20px !important;
+  right: 20px !important;
+  z-index: var(--as-z-button) !important;
+  padding: 12px 20px !important;
+  background: var(--as-gradient) !important;
+  color: white !important;
+  border: none !important;
+  border-radius: var(--as-radius-sm) !important;
+  font-weight: 600 !important;
+  cursor: pointer !important;
+  box-shadow: var(--as-shadow-glow) !important;
+  transition: all 0.2s ease !important;
+}
+
+#alismart-magic-fill:hover {
+  transform: translateY(-2px) !important;
+  box-shadow: var(--as-shadow-glow-hover) !important;
+}

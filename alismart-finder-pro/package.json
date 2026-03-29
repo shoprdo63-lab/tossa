@@ -1,0 +1,59 @@
+{
+  "name": "alismart-finder-pro",
+  "private": true,
+  "version": "2.0.0",
+  "type": "module",
+  "description": "AliSmart Finder Pro - Chrome Extension for AliExpress price comparison",
+  "scripts": {
+    "dev": "vite --mode development",
+    "build": "vite build --mode production",
+    "build:dev": "vite build --mode development",
+    "preview": "vite preview",
+    "lint": "eslint .",
+    "lint:fix": "eslint . --fix",
+    "clean": "rm -rf dist",
+    "build:clean": "npm run clean && npm run build",
+    "watch": "vite build --watch --mode development",
+    "zip": "npm run build && cd dist && zip -r ../alismart-finder-pro-v2.0.0.zip .",
+    "zip:win": "npm run build && powershell -Command \"Compress-Archive -Path dist/* -DestinationPath alismart-finder-pro-v2.0.0.zip -Force\""
+  },
+  "dependencies": {
+    "i18next": "^23.7.16",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-i18next": "^14.0.0",
+    "recharts": "^2.10.3"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.39.4",
+    "@types/chrome": "^0.1.38",
+    "@types/react": "^18.2.43",
+    "@types/react-dom": "^18.2.17",
+    "@vitejs/plugin-react": "^6.0.1",
+    "autoprefixer": "^10.4.27",
+    "eslint": "^9.39.4",
+    "eslint-plugin-react-hooks": "^7.0.1",
+    "eslint-plugin-react-refresh": "^0.5.2",
+    "globals": "^17.4.0",
+    "postcss": "^8.5.8",
+    "tailwindcss": "^3.4.1",
+    "vite": "^5.0.8"
+  },
+  "browserslist": [
+    "Chrome >= 90",
+    "Firefox >= 88"
+  ],
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "keywords": [
+    "chrome-extension",
+    "aliexpress",
+    "price-comparison",
+    "shopping",
+    "e-commerce"
+  ],
+  "author": "AliSmart Team",
+  "license": "MIT"
+}

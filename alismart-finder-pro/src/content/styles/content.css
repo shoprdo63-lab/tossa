@@ -1,0 +1,175 @@
+/**
+ * AliSmart Finder Pro - Content Script Styles
+ * סגנונות Tailwind CSS בסיסיים לסקריפט התוכן
+ * 
+ * עיצוב "Quiet Luxury" עם ורוד-כתום gradient
+ */
+
+/* Tailwind directives */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+@layer base {
+  /* CSS Variables */
+  :root {
+    --as-brand-primary: #ff6a00;
+    --as-brand-secondary: #ee0979;
+    --as-dark-900: #1a1a2e;
+    --as-dark-800: #16213e;
+    --as-text-primary: #f8f9fa;
+    --as-text-secondary: #adb5bd;
+    --as-z-max: 2147483647;
+    --as-z-overlay: 2147483646;
+    --as-z-sidebar: 2147483645;
+  }
+  
+  /* RTL support */
+  [dir="rtl"] {
+    direction: rtl;
+  }
+}
+
+/* Component styles */
+@layer components {
+  /* AliSmart Button Wrapper */
+  .alismart-button-wrapper {
+    @apply absolute top-2 right-2 z-[2147483646];
+    pointer-events: auto;
+  }
+  
+  /* AliSmart Trigger Button */
+  .alismart-trigger-btn {
+    @apply flex items-center gap-1 px-3 py-1.5 rounded-full text-white text-xs font-semibold whitespace-nowrap select-none opacity-95 transition-all duration-200;
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 2px 8px rgba(238, 9, 121, 0.4);
+    border: none;
+    cursor: pointer;
+    line-height: 1;
+  }
+  
+  .alismart-trigger-btn:hover {
+    @apply opacity-100 scale-105;
+    box-shadow: 0 4px 12px rgba(238, 9, 121, 0.6);
+  }
+  
+  /* Tooltip */
+  .alismart-tooltip {
+    @apply absolute text-xs text-white px-3 py-1.5 rounded-md whitespace-nowrap;
+    top: calc(100% + 6px);
+    right: 0;
+    background-color: #1a1a2e;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.2s ease;
+    direction: rtl;
+    z-index: 2147483647;
+  }
+  
+  /* Shadow Host Container */
+  .alismart-shadow-host {
+    @apply absolute inset-0 pointer-events-none;
+    z-index: 2147483646;
+  }
+  
+  /* Animations */
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+      transform: translateY(-4px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }
+  
+  @keyframes slideIn {
+    from {
+      transform: translateX(100%);
+    }
+    to {
+      transform: translateX(0);
+    }
+  }
+  
+  @keyframes pulse {
+    0%, 100% {
+      opacity: 1;
+    }
+    50% {
+      opacity: 0.7;
+    }
+  }
+}
+
+/* Utility classes */
+@layer utilities {
+  /* Isolation utilities */
+  .as-isolate {
+    isolation: isolate;
+  }
+  
+  /* Z-index utilities */
+  .as-z-max {
+    z-index: 2147483647;
+  }
+  
+  .as-z-overlay {
+    z-index: 2147483646;
+  }
+  
+  .as-z-sidebar {
+    z-index: 2147483645;
+  }
+  
+  /* Gradient text */
+  .as-gradient-text {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+  }
+  
+  /* Brand gradient background */
+  .as-gradient-bg {
+    background: linear-gradient(135deg, #ff6a00, #ee0979);
+  }
+  
+  /* RTL utilities */
+  .as-rtl {
+    direction: rtl;
+    text-align: right;
+  }
+  
+  /* Hover-only visibility */
+  .as-hover-only {
+    opacity: 0;
+    transition: opacity 0.2s ease;
+  }
+  
+  .as-hover-parent:hover .as-hover-only {
+    opacity: 1;
+  }
+}
+
+/* Custom scrollbar for webkit browsers */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #1a1a2e;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #3d3d5c;
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #4d4d6c;
+}

@@ -1,0 +1,776 @@
+{
+  "app": {
+    "name": "AliSmart Finder Pro",
+    "version": "גרסה 2.0.0"
+  },
+  "tabs": {
+    "search": "חיפוש",
+    "favorites": "מועדפים",
+    "settings": "הגדרות"
+  },
+  "header": {
+    "close": "סגור",
+    "theme": {
+      "light": "מעבר למצב יום",
+      "dark": "מעבר למצב לילה"
+    }
+  },
+  "search": {
+    "title": "חיפוש מוצרים",
+    "placeholder": "חפש מוצרים...",
+    "searchingFor": "מחפש חלופות ל:",
+    "currentPrice": "מחיר נוכחי:",
+    "resultsFound": "נמצאו {{count}} תוצאות",
+    "noResults": "לא נמצאו תוצאות",
+    "tryDifferent": "נסה לחפש מוצר אחר",
+    "minRating": "מוצרים צריכים דירוג {{rating}}+ כוכבים כדי להופיע",
+    "loading": "מחפש מחירים טובים יותר...",
+    "loadingSubtitle": "מבצע חיפוש ויזואלי וטקסטואלי במקביל",
+    "recent": "חיפושים אחרונים",
+    "suggestions": "הצעות",
+    "clear": "נקה",
+    "remove": "הסר",
+    "searching": "מחפש...",
+    "resultsFor": "תוצאות עבור",
+    "tryAgain": "נסה מילות מפתח אחרות",
+    "popular": "חיפושים פופולריים",
+    "pressEnter": "לחץ Enter לחיפוש",
+    "trigger": {
+      "title": "מצא מחיר טוב יותר",
+      "tooltip": "מצא מחיר זול יותר"
+    }
+  },
+  "product": {
+    "bestDeal": "הצעה הטובה ביותר",
+    "viewProduct": "צפה במוצר",
+    "addToFavorites": "הוסף למועדפים",
+    "removeFromFavorites": "הסר ממועדפים",
+    "savings": "חיסכון {{percent}}%",
+    "trust": {
+      "high": "מוכר מוביל",
+      "medium": "מוכר מאומת",
+      "low": "מוכר חדש",
+      "unknown": "מוכר חדש"
+    },
+    "price": {
+      "item": "מחיר מוצר",
+      "shipping": "משלוח",
+      "total": "סה\"כ",
+      "freeShipping": "משלוח חינם",
+      "notAvailable": "לא זמין"
+    },
+    "rating": "{{rating}} כוכבים",
+    "orders": "{{count}} נמכרו"
+  },
+  "favorites": {
+    "title": "מוצרים שמורים",
+    "empty": {
+      "title": "אין מועדפים עדיין",
+      "description": "כשתמצא מוצרים שאתה אוהב, לחץ על סימן הלב כדי לשמור אותם כאן"
+    },
+    "count": "{{count}} מוצר שמור",
+    "count_plural": "{{count}} מוצרים שמורים",
+    "savedOn": "נשמר ב-{{date}}",
+    "remove": "הסר"
+  },
+  "settings": {
+    "title": "הגדרות",
+    "display": {
+      "title": "תצוגה",
+      "darkMode": "מצב לילה",
+      "darkModeDescription": "הפעל עיצוב כהה לשימוש בלילה"
+    },
+    "buttonDisplay": {
+      "title": "תצוגת כפתורים",
+      "description": "הגדר כיצד כפתורי AliSmart מופיעים בכרטיסי מוצרים",
+      "alwaysOn": "תמיד פעיל",
+      "alwaysOnDesc": "כפתורים גלויים בכל המוצרים",
+      "hoverOnly": "ריחוף בלבד",
+      "hoverOnlyDesc": "מופיעים בעת ריחוף על מוצרים",
+      "hidden": "מוסתר",
+      "hiddenDesc": "השבת כל הכפתורים המרחפים"
+    },
+    "buttonPosition": {
+      "title": "מיקום כפתור",
+      "topRight": "ימין עליון",
+      "topLeft": "שמאל עליון"
+    },
+    "preview": "תצוגה מקדימה",
+    "previewHint": "רחף מעל כרטיס התצוגה כדי לראות את הכפתור",
+    "saved": "נשמר!",
+    "changesApply": "השינויים חלים מיד על כל לשוניות AliExpress"
+  },
+  "language": {
+    "title": "שפה",
+    "label": "שפת ממשק",
+    "options": {
+      "he": "עברית",
+      "en": "English"
+    }
+  },
+  "currency": {
+    "title": "מטבע",
+    "label": "מטבע מועדף",
+    "options": {
+      "ILS": "שקל (₪)",
+      "USD": "דולר ($)",
+      "EUR": "יורו (€)",
+      "GBP": "לירה שטרלינג (£)"
+    }
+  },
+  "searchSettings": {
+    "title": "חיפוש",
+    "sortBy": "מיון תוצאות",
+    "sortOptions": {
+      "SALE_PRICE_ASC": "מחיר - מהנמוך לגבוה",
+      "SALE_PRICE_DESC": "מחיר - מהגבוה לנמוך",
+      "EVALUATE_RATE_ASC": "דירוג - מהגבוה לנמוך",
+      "SALE_QTY_ASC": "הזמנות - מהגבוה לנמוך"
+    }
+  },
+  "help": {
+    "title": "עזרה",
+    "guide": "מדריך שימוש",
+    "feedback": "משוב"
+  },
+  "about": {
+    "version": "AliSmart Finder Pro v2.0.0",
+    "copyright": "© 2026 AliSmart. כל הזכויות שמורות."
+  },
+  "errors": {
+    "searchFailed": "החיפוש נכשל. נסה שוב.",
+    "networkError": "שגיאת רשת. בדוק את החיבור שלך.",
+    "noImage": "לא נמצאה תמונה",
+    "noTitle": "לא נמצאה כותרת"
+  },
+  "status": {
+    "searching": "מחפש...",
+    "loading": "טוען...",
+    "saving": "שומר...",
+    "saved": "נשמר!",
+    "removed": "הוסר",
+    "error": "אירעה שגיאה"
+  },
+  "filters": {
+    "title": "סינון",
+    "results": "{{count}} תוצאות",
+    "priceRange": "טווח מחירים",
+    "min": "מינימום",
+    "max": "מקסימום",
+    "freeShipping": "משלוח חינם",
+    "topRated": "דירוג גבוה 4.5+",
+    "clear": "נקה הכל"
+  },
+  "sort": {
+    "sortBy": "מיין לפי",
+    "options": {
+      "best_match": "התאמה טובה ביותר",
+      "price_asc": "מחיר - מהנמוך לגבוה",
+      "price_desc": "מחיר - מהגבוה לנמוך",
+      "rating_desc": "דירוג - מהגבוה לנמוך",
+      "shipping_speed": "מהירות משלוח"
+    }
+  },
+  "noResults": {
+    "title": "לא נמצאו תוצאות",
+    "description": "נסה לשנות את הסינון כדי לראות יותר תוצאות",
+    "adjustFilters": "שנה סינון"
+  },
+  "chart": {
+    "priceHistory": "היסטוריית מחירים",
+    "days": "ימים",
+    "noData": "אין נתוני היסטוריה זמינים",
+    "lowest": "הנמוך ביותר",
+    "highest": "הגבוה ביותר",
+    "average": "ממוצע",
+    "current": "נוכחי",
+    "today": "היום",
+    "daysAgo": "לפני {{count}} ימים",
+    "greatDeal": "דיל מעולה! המחיר הכי נמוך",
+    "goodDeal": "דיל טוב - מתחת לממוצע",
+    "averagePrice": "מחיר ממוצע"
+  },
+  "activeFilters": {
+    "searchingFor": "מחפש",
+    "color": "צבע",
+    "size": "מידה",
+    "model": "דגם",
+    "clear": "נקה",
+    "clearColor": "נקה סינון צבע",
+    "clearSize": "נקה סינון מידה",
+    "clearModel": "נקה סינון דגם"
+  },
+  "trust": {
+    "sellerTrust": "אמינות מוכר",
+    "feedbackRate": "אחוז פידבק חיובי",
+    "storeAge": "וותק החנות",
+    "aliRating": "דירוג עליאקספרס",
+    "yearsOpen": "{{count}} שנים",
+    "high": "מאומת",
+    "medium": "בינוני",
+    "low": "סיכון",
+    "topBrand": "מותג מוביל",
+    "verifiedStore": "חנות מאומתת משנת {{year}}",
+    "highResponseRate": "שיעור תגובה גבוה",
+    "lowNegativeFeedback": "פידבק שלילי נמוך",
+    "nonFilteredWarning": "החנות עשויה להכיל תמונות מוצרים לא מסוננות",
+    "newStore": "חנות חדשה"
+  },
+  "cloud": {
+    "syncing": "מסנכרן...",
+    "synced": "מסונכרן",
+    "offline": "לא מקוון",
+    "error": "הסנכרון נכשל",
+    "justNow": "עכשיו",
+    "minutesAgo": "לפני {{count}} דקות",
+    "hoursAgo": "לפני {{count}} שעות",
+    "cloudSync": "סנכרון ענן",
+    "universalFavorites": "מועדפים אוניברסליים",
+    "syncDescription": "המועדפים שלך מסונכרנים בכל המכשירים",
+    "retrySync": "נסה שוב",
+    "export": "ייצוא",
+    "import": "ייבוא",
+    "backupCreated": "הגיבוי נוצר בהצלחה",
+    "restoreSuccess": "המועדפים שוחזרו בהצלחה"
+  },
+  "coupon": {
+    "searching": "מחפש קופונים...",
+    "foundForOrder": "נמצאו {{count}} קופונים להזמנתך!",
+    "availableCodes": "{{count}} קודי קופון זמינים",
+    "potentialSavings": "חיסכון פוטנציאלי: {{amount}}",
+    "applyNow": "החל עכשיו",
+    "bestForYou": "הכי מתאים לך",
+    "moreAvailable": "עוד {{count}} זמינים",
+    "showAll": "הצג את כל {{count}} הקופונים",
+    "save": "חיסכון",
+    "saveUpTo": "חסוך עד",
+    "minOrder": "מינ.",
+    "max": "מקס",
+    "newUser": "משתמש חדש",
+    "freeShipping": "משלוח חינם",
+    "copyApply": "העתק והחל",
+    "copied": "הועתק!",
+    "codeCopied": "הקוד הועתק!",
+    "tip": "העתק את הקוד והדבק אותו בדף התשלום",
+    "needMore": "חסר עוד ${{amount}}"
+  },
+  "priceAlert": {
+    "title": "התראת מחיר",
+    "subtitle": "קבל התראה כשהמחיר יורד",
+    "currentPrice": "מחיר נוכחי",
+    "targetPrice": "מחיר יעד",
+    "youSave": "אתה חוסך",
+    "setAlert": "הגדר התראה",
+    "hasAlert": "התראה מוגדרת (לחץ ימני להסרה)",
+    "active": "התראה פעילה",
+    "notifyMe": "הודיעו לי",
+    "orSave": "או חסוך",
+    "info": "נבדוק את המחיר כל שעה ונודיע לך כשהוא יורד מתחת ליעד.",
+    "update": "עדכן התראה",
+    "create": "צור התראה",
+    "priceDropTitle": "💰 ירידת מחיר!",
+    "priceDropMessage": "{0}... עכשיו {1} (היה {2}, חיסכון {3})",
+    "viewProduct": "צפה במוצר",
+    "alerts": "התראות מחיר",
+    "noAlerts": "אין התראות מחיר",
+    "addAlert": "הוסף התראת מחיר",
+    "removeAlert": "הסר התראה",
+    "targetReached": "מחיר היעד הושג!",
+    "saving": "שומר...",
+    "saved": "נשמר!",
+    "settings": {
+      "title": "הגדרות התראות",
+      "enabled": "הפעל התראות מחיר",
+      "interval": "מרווח בדיקה (דקות)",
+      "minDrop": "ירידה מינימלית % להתראה",
+      "maxPerDay": "מקסימום התראות ביום"
+    }
+  },
+  "cart": {
+    "title": "העגלה שלך",
+    "empty": "העגלה ריקה",
+    "emptySubtext": "הוסף מוצרים לראות הזדמנויות חיסכון",
+    "itemCount": "{{count}} פריטים",
+    "itemCount_one": "פריט אחד",
+    "total": "סה\"כ: ${{amount}}",
+    "potentialSavings": "חסוך עד ${{amount}}",
+    "savingsOpportunity": "הזדמנות חיסכון!",
+    "couldSave": "אתה יכול לחסוך עד ${{amount}} על הפריטים האלה",
+    "findCheaper": "מצא זול יותר",
+    "findSimilar": "מצא דומה",
+    "saveOnAll": "חסוך על כל הפריטים",
+    "itemSavings": "חסוך ${{amount}}",
+    "swap": "החלף",
+    "cheaperAlternative": "נמצאה אלטרנטיבה זולה יותר",
+    "swapSuccess": "הפריט הוחלף בהצלחה!",
+    "checking": "בודק מחירים טובים יותר...",
+    "noSavings": "לא נמצאו אלטרנטיבות זולות יותר",
+    "quantity": "כמות: {{count}}"
+  },
+  "insights": {
+    "noReviews": "אין ביקורות זמינות",
+    "analyzing": "מנתח ביקורות...",
+    "processing": "מעבד {{count}} ביקורות",
+    "error": "ניתוח הביקורות נכשל",
+    "retry": "נסה שוב",
+    "satisfaction": "שביעות רצון לקוחות",
+    "totalReviews": "{{count}} ביקורות נותחו",
+    "pros": "יתרונות",
+    "cons": "חסרונות",
+    "verdict": "פסק דין",
+    "defaultPro": "ביקורות חיוביות באופן כללי",
+    "noCons": "לא דווחו על בעיות משמעותיות",
+    "verdicts": {
+      "highlyRecommended": "מומלץ בחום",
+      "mixed": "ביקורות מעורבות - שקול חלופות",
+      "caution": "התקדם בזהירות"
+    },
+    "showReviews": "הצג ביקורות מקוריות",
+    "hideReviews": "הסתר ביקורות מקוריות",
+    "accuracy": "דיוק",
+    "basedOn": "מבוסס על {{count}} ביקורות"
+  },
+  "shipping": {
+    "noProductData": "אין נתוני מוצר זמינים",
+    "totalLandedCost": "סה\"כ עלות סופית",
+    "includesTaxes": "כולל מסים ומכס",
+    "quantity": "כמות",
+    "costBreakdown": "פירוט עלויות",
+    "subtotal": "סכום ביניים",
+    "taxesAndFees": "מיסים ותשלומים",
+    "shippingOptions": "אפשרויות משלוח",
+    "bestValue": "הכי משתלם",
+    "free": "חינם",
+    "taxFreeThreshold": "סף פטור ממס",
+    "estimatedDelivery": "זמן הגעה משוער",
+    "deliveryTime": "{{min}}-{{max}} ימים",
+    "standardShipping": "משלוח רגיל",
+    "expressShipping": "משלוח מהיר",
+    "freeShipping": "משלוח חינם",
+    "disclaimer": "מחיר משוער. המחיר הסופי עשוי להשתנות לפי רשויות מקומיות.",
+    "customsWarning": "זהירות! קרוב לסף המכס.",
+    "customsThresholdReached": "סף המכס הושג. יוחלו מסים.",
+    "savingsOpportunity": "הזדמנות חיסכון",
+    "addMoreToTrigger": "הוספת פריטים עשויה לחייב מכס."
+  },
+  "share": {
+    "share": "שתף",
+    "shareProduct": "שתף מוצר",
+    "generating": "מייצר קישור...",
+    "copyLink": "העתק קישור",
+    "copyWithMessage": "העתק עם הודעה",
+    "copied": "הועתק!",
+    "showQR": "הצג QR Code",
+    "hideQR": "הסתר QR Code",
+    "scanToOpen": "סרוק לפתיחה בנייד",
+    "shareOnWhatsApp": "שתף בוואטסאפ",
+    "shareOnTelegram": "שתף בטלגרם",
+    "linkNote": "קישור נקי - ללא פרמטרי מעקב",
+    "linkCopied": "הקישור הועתק ללוח",
+    "messageCopied": "ההודעה הועתקה ללוח",
+    "shareMessage": "תראה מה מצאתי! 🎁\n\n{title} - {price}\n\n{link}"
+  },
+  "trends": {
+    "analyzing": "מנתח מגמות שוק...",
+    "noData": "אין מספיק נתונים לניתוח מגמות",
+    "priceTrend": "ניתוח מגמות מחיר",
+    "vsMarket": "לעומת ממוצע השוק",
+    "thisProduct": "מוצר זה",
+    "marketAverage": "ממוצע שוק",
+    "change30d": "שינוי 30 יום",
+    "volatility": "תנודתיות",
+    "confidence": "ודאות",
+    "buyingAdvice": {
+      "buy": "זמן מעולה לקנות",
+      "wait": "שקלו להמתין",
+      "neutral": "מחיר הוגן"
+    },
+    "showDetails": "הצג פרטי שוק",
+    "hideDetails": "הסתר פרטים",
+    "similarProducts": "מוצרים דומים שהושוו",
+    "disclaimer": "מבוסס על נתונים היסטוריים. ביצועים עבריים אינם מבטיחים תוצאות עתידיות.",
+    "marketStatus": {
+      "hot": "שוק חם 🔥",
+      "warming": "מתחמם ↗️",
+      "cold": "שוק קר ❄️",
+      "cooling": "מתקרר ↘️",
+      "stable": "שוק יציב 📊"
+    }
+  },
+  "savings": {
+    "title": "החיסכון שלך",
+    "subtitle": "סטטיסטיקות קניה חכמה",
+    "loading": "טוען את החיסכון שלך...",
+    "noData": "אין עדיין נתוני חיסכון",
+    "addDemo": "הוסף נתוני דמו",
+    "share": "שתף",
+    "shareTitle": "שתף את החיסכון שלך",
+    "shareText": "חסכתי ",
+    "shareText2": " עם AliSmart!",
+    "download": "הורד תמונה",
+    "totalSaved": "סה\"כ חוסכנו",
+    "lifetime": "חיסכון מצטבר עם AliSmart",
+    "smartChoices": "בחירות חכמות",
+    "couponsUsed": "קופונים שנוצלו",
+    "couponsFound": "קופונים שנמצאו",
+    "tracked": "מוצרים במעקב",
+    "weeklyActivity": "פעילות שבועית",
+    "saved": "נחסך",
+    "achievements": "הישגים",
+    "noAchievements": "המשיכו לקנות כדי לפתוח הישגים!"
+  },
+  "currency": {
+    "title": "ממיר מטבעות",
+    "rate": "שער",
+    "localCurrency": "מטבע מקומי",
+    "bankFee": "עמלת המרה בנקאית",
+    "original": "מחיר מקורי",
+    "finalPrice": "מחיר סופי",
+    "includesFee": "כולל {{fee}}% עמלת בנק",
+    "converted": "מומר",
+    "bankFeeAmount": "עמלת בנק",
+    "noPrice": "בחרו מוצר לראות המרה",
+    "disclaimer": "שער החליפין להערכה בלבד. השער בפועל תלוי בתאריך הסליקה."
+  },
+  "filter": {
+    "safeMode": "מצב גלישה בטוחה",
+    "safeModeDesc": "טשטש תוכן רגיש באופן אוטומטי",
+    "contentHidden": "תוכן מוסתר",
+    "tapToShow": "הקש להצגה",
+    "showAnyway": "הצג בכל זאת",
+    "showAllImages": "הצג את כל התמונות",
+    "suspiciousReview": "ביקורת חשודה מוסתרת",
+    "potentiallyAutomated": "ביקורת זו עשויה להיות אוטומטית או ספאם.",
+    "anonymous": "אנונימי",
+    "verifiedPurchase": "רכישה מאומתת",
+    "verifiedReview": "ביקורת מאומתת",
+    "checkReview": "נדרשת בדיקה",
+    "flag": {
+      "too_short": "ביקורת קצרה",
+      "no_content": "חסר פירוט",
+      "duplicate": "כפולה",
+      "spam_pattern": "תבנית ספאם",
+      "generic_username": "משתמש גנרי"
+    }
+  },
+  "inventory": {
+    "title": "סטטוס מלאי",
+    "warehouseChecked": "נתוני מחסן נבדקו",
+    "unavailable": "סטטוס מלאי לא זמין",
+    "units": "יחידות",
+    "outOfStock": "אזל מהמלאי",
+    "lowStock": "מלאי נמוך",
+    "limited": "מלאי מוגבל",
+    "moderate": "מלאי מתון",
+    "plenty": "מלאי שפוף",
+    "fakeUrgency": "זוהו טקטיקות שיווק",
+    "hideVariants": "הסתר וריאציות",
+    "showVariants": "הצג {{count}} וריאציות",
+    "inStock": "במלאי",
+    "out": "אזל",
+    "tooltip": "בדקנו את נתוני המחסן: {{count}} יחידות זמינות בפועל."
+  },
+  "address": {
+    "vaultTitle": "כספת כתובות",
+    "fullName": "שם מלא",
+    "phone": "טלפון",
+    "email": "אימייל",
+    "streetAddress": "כתובת",
+    "apartment": "דירה, סוויטה, בניין",
+    "city": "עיר",
+    "state": "מדינה/מחוז",
+    "zipCode": "מיקוד",
+    "country": "מדינה",
+    "taxId": "מספר תעודת זהות",
+    "taxIdPlaceholder": "9 ספרות למכס",
+    "deliveryNotes": "הערות למשלוח",
+    "saveSecurely": "שמור באופן מאובטח",
+    "autoFill": "מלא כתובת אוטומטית",
+    "privacyNotice": "הנתונים שלך מוצפנים ונשמרים מקומית בלבד",
+    "required": "נדרש",
+    "saved": "הכתובת נשמרה באופן מאובטח 🔒",
+    "clearData": "נקה נתונים",
+    "taxIdHelp": "נדרש על ידי המכס בישראל לשחרור חבילות. הזן את מספר תעודת הזהות הישראלית שלך (9 ספרות).",
+    "zipCodeHelp": "7 ספרות בישראל",
+    "magicFill": "מלא כתובת אוטומטית",
+    "fillSuccess": "הכתובת מולאה!",
+    "noAddress": "אנא שמור את הכתובת שלך בסרגל הצד של AliSmart קודם!"
+  },
+  "aiAdvisor": {
+    "title": "יועץ עסקאות AI",
+    "analyzing": "AI מנתח נתוני שוק...",
+    "analyzingSub": "בודק היסטוריית מחירים, לוח מכירות ודפוסי מוכרים",
+    "dealScore": "ציון עסקה",
+    "expertVerdict": "פסיקת מומחה AI",
+    "highConfidence": "ביטחון גבוה",
+    "mediumConfidence": "ביטחון בינוני",
+    "lowConfidence": "ביטחון נמוך",
+    "tiers": {
+      "golden": "עסקת זהב",
+      "excellent": "מצוין",
+      "fair": "מחיר הוגן",
+      "wait": "המתן וראה",
+      "avoid": "מחיר מופרז"
+    },
+    "current": "נוכחי",
+    "average": "ממוצע (30 יום)",
+    "lowest": "הנמוך ביותר",
+    "savingsPotential": "חסוך עד {{amount}} אם תמתין",
+    "pinPrice": "נעץ מחיר זה",
+    "unpinPrice": "הסר נעיצה",
+    "pinnedAt": "נעוץ ב-{{price}}",
+    "alertWhenBelow": "התראה כשמתחת ל-{{price}}",
+    "showDetails": "הצג פרטי ניתוח",
+    "hideDetails": "הסתר פרטי ניתוח",
+    "analysisFactors": "גורמי ניתוח",
+    "sellerBehavior": "התנהגות מחירי מוכר",
+    "upcomingSales": "מכירות קרובות",
+    "recommendations": {
+      "buyNow": "עסקת זהב! המחיר במינימום או קרוב לו. קנה עכשיו!",
+      "goodDeal": "עסקה טובה - {{percent}}% מתחת למחיר ממוצע.",
+      "fairPrice": "מחיר הוגן - קרוב לממוצע ההיסטורי.",
+      "wait": "שקול להמתין - המחיר עשוי לרדת בקרוב על בסיס דפוסים היסטוריים.",
+      "strongWait": "מחיר מופרז ב-{{percent}}%. המתן למכירה."
+    },
+    "factors": {
+      "priceAboveAverage": "המחיר הנוכחי מעל הממוצע ל-30 יום",
+      "priceBelowAverage": "המחיר מתחת לממוצע - עסקה טובה",
+      "nearAllTimeLow": "קרוב למחיר הנמוך ביותר אי פעם",
+      "nearAllTimeHigh": "קרוב למחיר הגבוה ביותר אי פעם",
+      "saleApproaching": "מכירה גדולה מתקרבת בתוך 7 ימים",
+      "saleImminent": "מכירה מתחילה בקרוב מאוד",
+      "highManipulation": "המוכר מראה דפוסי מניפולציית מחירים",
+      "stablePrice": "המחיר יציב היסטורית",
+      "highShipping": "עלות משלוח גבוהה משפיעה על הערך"
+    }
+  },
+  "comparison": {
+    "title": "מטריצת השוואה",
+    "found": "נמצאו",
+    "filters": {
+      "freeShipping": "משלוח חינם",
+      "topRated": "מדורג 4.8+",
+      "choiceOnly": "רק Choice",
+      "eliteOnly": "רק עילית"
+    },
+    "table": {
+      "rank": "#",
+      "product": "מוצר",
+      "price": "מחיר",
+      "delivery": "משלוח",
+      "score": "ציון ערך",
+      "empty": "עסקאות טובות יותר יופיעו כאן"
+    },
+    "badges": {
+      "cheapest": "הזול ביותר",
+      "fastest": "משלוח מהיר",
+      "trusted": "האמין ביותר",
+      "freeShipping": "משלוח חינם",
+      "choice": "Choice",
+      "elite": "בחירת עילית"
+    },
+    "actions": {
+      "goToDeal": "לעסקה",
+      "showDetails": "הצג פרטים",
+      "hideDetails": "הסתר פרטים"
+    },
+    "scoreBreakdown": {
+      "price": "מחיר",
+      "reliability": "אמינות",
+      "shipping": "משלוח",
+      "trust": "ביטחון",
+      "max": "/100"
+    },
+    "sellerInfo": {
+      "rating": "דירוג מוכר",
+      "feedback": "פידבק",
+      "storeAge": "וותק חנות",
+      "orders": "הזמנות"
+    },
+    "footer": "מציג {count} מתחרי עילית מובילים לפי אלגוריתם Golden Score",
+    "emptyState": {
+      "title": "עסקאות טובות יותר נמצאו",
+      "description": "גלוש במוצרי AliExpress כדי לראות חלופות תחרותיות מדורגות לפי ערך"
+    },
+    "loading": "בונה מטריצת השוואה..."
+  },
+  "voucherSniper": {
+    "title": "צלף וואוצ'רים נסתרים",
+    "scanning": "מצב צלף פעיל...",
+    "scanningSub": "סורק API חנות לאיתור וואוצ'רים נסתרים",
+    "found": "נמצאו",
+    "tabs": {
+      "hidden": "עסקאות נסתרות",
+      "combos": "שילובים זהובים"
+    },
+    "magicCodes": "קודי קסם",
+    "goldenCombo": "השילוב הזהוב",
+    "comboDesc": "שילובי וואוצ'רים הטובים ביותר שניתן לשלב יחד",
+    "voucherTypes": {
+      "follower": "עוקבים",
+      "threshold": "סף",
+      "platform": "פלטפורמה",
+      "cashback": "קאשבק"
+    },
+    "off": "הנחה",
+    "minOrder": "מינימום הזמנה ${amount}",
+    "daysLeft": "נותרו {days} ימים",
+    "expired": "פג תוקף",
+    "unknownExpiry": "תפוגה לא ידועה",
+    "saveAmount": "חסוך ${amount} בהזמנה שלך",
+    "needMore": "הוסף עוד ${amount}",
+    "applied": "הופעל",
+    "selected": "{count} נבחרו",
+    "potentialSavings": "חסוך עד ${amount}",
+    "actions": {
+      "applySelected": "הפעל נבחרים",
+      "autoApplyAll": "הפעל הכל אוטומטית ({count} קודים)",
+      "testingCodes": "בודק קודים...",
+      "selectCombo": "בחר שילוב זה"
+    },
+    "success": {
+      "title": "נמצאה עסקה נסתרת!",
+      "voucherApplied": "וואוצ'ר נסתר של ${amount} הופעל בהצלחה",
+      "autoApplied": "הופעל וואוצ'ר הטוב ביותר: {code} (-${amount})"
+    },
+    "emptyState": {
+      "title": "צלף וואוצ'רים נסתרים",
+      "description": "צפה במוצר מחנות AliExpress כדי לסרוק קופונים נסתרים"
+    },
+    "noVouchers": "לא נמצאו וואוצ'רים נסתרים לחנות זו",
+    "noCombos": "לא נמצאו שילובים שניתן לשלב. נסה וואוצ'רים בודדים.",
+    "footer": "סורק API חנות, קופוני עוקבים וספים נסתרים"
+  },
+  "sellerRadar": {
+    "title": "מכ\"ם אמינות מוכר",
+    "scanning": "סורק פרופיל מוכר...",
+    "scanningSub": "מנתח 3 שנים של נתוני עסקאות",
+    "trustScore": "ציון אמינות",
+    "statusBadges": {
+      "elite": "חנות עילית",
+      "trusted": "סוחר מהימן",
+      "emerging": "חנות צעירה",
+      "warning": "זהירות מומלצת",
+      "danger": "סיכון גבוה"
+    },
+    "metrics": {
+      "weeksActive": "שבועות פעיל",
+      "totalSales": "סה\"כ מכירות",
+      "positive": "חיובי",
+      "rating": "דירוג"
+    },
+    "riskAlerts": "התראות סיכון",
+    "alertsTitle": "התראות סיכון ({count})",
+    "riskFactors": {
+      "ghostStore": {
+        "title": "חנות רפאים פוטנציאלית",
+        "description": "חנות נפתחה לפני {weeks} שבועות עם {sales} מכירות"
+      },
+      "volumeAnomaly": {
+        "title": "נפח מכירות חריג",
+        "description": "נפח מכירות גבוה לחנות חדשה"
+      },
+      "reviewBurst": {
+        "title": "תבנית ביקורת חשודה",
+        "description": "{count} ביקורות בשבוע אחד (אפשרות לבוטים)"
+      },
+      "priceManipulation": {
+        "title": "זוהתה מניפולציית מחירים",
+        "description": "המוכר העלה את המחיר ב-{percent}% לאחרונה"
+      },
+      "poorCommunication": {
+        "title": "תקשורת איטית",
+        "description": "שיעור תגובה של רק {rate}%"
+      },
+      "lowFeedback": {
+        "title": "ציון משוב נמוך",
+        "description": "רק {percent}% משוב חיובי"
+      }
+    },
+    "categoryComparison": "לעומת ממוצע הקטגוריה",
+    "positiveIndicators": "מדדי אמון",
+    "warnings": "הערות",
+    "recommendations": {
+      "avoid": "הימנע ממוכר זה. זוהו מספר מדדי סיכון גבוהים.",
+      "caution": "התקדם בזהירות. בדוק גורמי סיכון לפני הרכישה.",
+      "check": "בדרך כלל אמין אך בדוק אזהרות ספציפיות.",
+      "safe": "בטוח לרכוש. המוכר מציג מדדי אמון חזקים."
+    },
+    "emptyState": {
+      "title": "מכ\"ם אמינות מוכר",
+      "description": "צפה במוצר AliExpress כדי לנתח את אמינות המוכר ולזהות סיכונים"
+    },
+  "footer": "ניתוח מבוסס על {count} עסקאות"
+},
+"pricePopup": {
+  "saveNow": "חסוך עכשיו",
+  "viewDeal": "צפה בעסקה",
+  "bestPrice": "המחיר הטוב ביותר נמצא!",
+  "foundInSearch": "נמצא בחיפוש שלנו.",
+  "savePrefix": "חסוך",
+  "currentBestMessage": "הוא כרגע המחיר הטוב ביותר הזמין."
+},
+"wishlist": {
+  "title": "רשימת משאלות חכמה",
+  "newCollection": "אוסף חדש",
+  "allItems": "כל הפריטים",
+  "items": "פריטים",
+  "item": "פריט",
+  "total": "סה\"כ",
+  "priceDropped": "זול יותר משבוע שעבר",
+  "priceIncreased": "יקר יותר משבוע שעבר",
+  "empty": "אין פריטים באוסף זה",
+  "emptyHint": "לחץ על סמל הלב בכל מוצר כדי להוסיף אותו לכאן",
+  "addTitle": "הוסף לרשימת המשאלות",
+  "selectCollection": "בחר אוסף",
+  "createCollection": "צור אוסף חדש",
+  "collectionName": "שם האוסף (לדוגמה: 'גאדג'טים טכנולוגיים')",
+  "cancel": "ביטול",
+  "create": "צור",
+  "shareCollection": "שתף אוסף",
+  "linkCopied": "הקישור הועתק!",
+  "syncing": "מסנכרן...",
+  "added": "נוסף לרשימת המשאלות",
+  "removed": "הוסר מרשימת המשאלות",
+  "alreadyExists": "הפריט כבר ברשימת המשאלות",
+  "viewProduct": "צפה במוצר",
+  "remove": "הסר מרשימת המשאלות",
+  "dropAlert": "המחיר ירד ב-{percent}%!",
+  "collectionStats": "{count} פריטים • ${value} סה\"כ"
+},
+"checkoutOptimizer": {
+  "title": "צ'קאאוט חכם",
+  "scanning": "סורק את העגלה...",
+  "analyzing": "מחפש מבצעים...",
+  "error": "לא ניתן לנתח את העגלה",
+  "retry": "נסה שוב",
+  "potentialSavings": "חיסכון פוטנציאלי",
+  "addMoreToSave": "הוסף ${amount} כדי לחסוך ${save}",
+  "thresholdDesc": "אתה במרחק ${gap} משחרור קופון ${coupon}",
+  "applyCoupon": "הפעל: {code} (-${amount})",
+  "couponDesc": "מינ. הזמנה ${min}",
+  "useCoins": "השתמש ב-{coins} מטבעות → חסוך ${save}",
+  "coinsDesc": "שער: {rate}/מטבע",
+  "itemCoins": "מקסימום מטבעות על \"{item}\"",
+  "itemCoinsDesc": "הנחה נוספת של ${discount} לפריט זה",
+  "stackVouchers": "שלב {count} קופונים → חסוך ${save}",
+  "stackDesc": "שילוב {codes} לחיסכון מקסימלי",
+  "customsWarning": "⚠️ סיכון מכס",
+  "customsDesc": "העגלה עוברת את הסף של $75 ללא מכס. צפה למע'מ של ~17% + עמלות.",
+  "customsAlert": "קרוב לסף המכס - מיסים עשויים לחול",
+  "alreadyOptimized": "העגלה שלך כבר מותאמת!",
+  "optimizationsFound": "דרכי חיסכון",
+  "apply": "הפעל",
+  "applied": "הופעל ✓",
+  "autoOptimize": "מטב את העגלה",
+  "optimizing": "מפעיל אופטימיזציה...",
+  "footerInfo": "הניתוח מבוסס על תוכן העגלה הנוכחי והמבצעים הזמינים",
+  "dealGrade": {
+    "excellent": "עסקה מעולה",
+    "great": "עסקה נהדרת",
+    "good": "עסקה טובה",
+    "fair": "עסקה הוגנת",
+    "poor": "עסקה חלשה"
+  }
+}
+}

@@ -1,0 +1,54 @@
+{
+  "manifest_version": 3,
+  "name": "AliSmart Finder",
+  "version": "1.0.1",
+  "description": "Your ultimate shopping assistant for AliExpress. Find cheaper alternatives. AliSmart Finder participates in affiliate programs.",
+  "permissions": [
+    "storage"
+  ],
+  "host_permissions": [
+    "https://*.aliexpress.com/*",
+    "https://*.aliexpress.us/*",
+    "https://*.aliexpress.ru/*",
+    "https://alismart-proxy.vercel.app/*",
+    "https://open.er-api.com/*"
+  ],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": [
+        "https://*.aliexpress.com/*",
+        "https://*.aliexpress.us/*",
+        "https://*.aliexpress.ru/*",
+        "https://aliexpress.com/*",
+        "https://aliexpress.us/*",
+        "https://aliexpress.ru/*"
+      ],
+      "js": ["content.js"],
+      "css": ["sidebar.css"],
+      "run_at": "document_start",
+      "all_frames": false
+    }
+  ],
+  "action": {
+    "default_popup": "popup.html",
+    "default_icon": {
+      "16": "icons/icon16.png",
+      "48": "icons/icon48.png",
+      "128": "icons/icon128.png"
+    }
+  },
+  "icons": {
+    "16": "icons/icon16.png",
+    "48": "icons/icon48.png",
+    "128": "icons/icon128.png"
+  },
+  "web_accessible_resources": [
+    {
+      "resources": ["sidebar.css", "libs/fonts/inter.css", "libs/fonts/inter-latin.woff2"],
+      "matches": ["https://*.aliexpress.com/*", "https://*.aliexpress.us/*", "https://*.aliexpress.ru/*"]
+    }
+  ]
+}

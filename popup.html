@@ -1,0 +1,457 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AliSmart Finder</title>
+  <style>
+    @font-face {
+      font-family: 'Inter';
+      font-style: normal;
+      font-weight: 100 900;
+      font-display: swap;
+      src: url('libs/fonts/inter-latin.woff2') format('woff2');
+    }
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      width: 400px;
+      min-height: 520px;
+      background: linear-gradient(145deg, #0d1117 0%, #161b22 50%, #21262d 100%);
+      color: #f0f6fc;
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+      overflow-x: hidden;
+    }
+
+    .header {
+      background: linear-gradient(135deg, #ff6b6b 0%, #f06595 50%, #cc5de8 100%);
+      padding: 28px 24px;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .header::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at 30% 30%, rgba(255,255,255,0.2) 0%, transparent 50%);
+      pointer-events: none;
+    }
+    
+    .header::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      height: 1px;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.5), transparent);
+    }
+    
+    .header h1 { 
+      font-size: 26px; 
+      color: white; 
+      font-weight: 800; 
+      letter-spacing: -0.5px;
+      text-shadow: 0 2px 8px rgba(0,0,0,0.2);
+      position: relative;
+      background: linear-gradient(135deg, #ffffff 0%, rgba(255,255,255,0.9) 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    .header p { 
+      font-size: 13px; 
+      color: rgba(255,255,255,0.9); 
+      margin-top: 6px;
+      font-weight: 400;
+      letter-spacing: 0.3px;
+    }
+
+    .content { padding: 18px 20px; }
+
+    .section { margin-bottom: 18px; }
+    .section-title {
+      font-size: 12px; font-weight: 700; color: #ff6a00;
+      text-transform: uppercase; letter-spacing: 1px;
+      margin-bottom: 12px; padding-bottom: 8px;
+    }
+    .section-title::before {
+      content: '';
+      width: 4px;
+      height: 16px;
+      background: linear-gradient(180deg, #ff6b6b, #cc5de8);
+      border-radius: 2px;
+      display: inline-block;
+      margin-right: 8px;
+      vertical-align: middle;
+    }
+
+    /* Quick Entry Button - Premium Style */
+    .quick-entry-btn {
+      width: 100%; 
+      padding: 16px 20px; 
+      border: none; 
+      border-radius: 14px;
+      font-size: 15px; 
+      font-weight: 600; 
+      cursor: pointer;
+      font-family: inherit; 
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background: linear-gradient(135deg, #22b8cf 0%, #339af0 50%, #5c7cfa 100%);
+      color: white;
+      margin-bottom: 16px; 
+      display: flex; 
+      align-items: center; 
+      justify-content: center; 
+      gap: 10px;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(51, 154, 240, 0.3);
+    }
+    .quick-entry-btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+      transition: left 0.5s;
+    }
+    .quick-entry-btn:hover { 
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(51, 154, 240, 0.4);
+    }
+    .quick-entry-btn:hover::before {
+      left: 100%;
+    }
+    .quick-entry-btn:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    /* Search Bar - Premium Style */
+    .search-bar {
+      display: flex; 
+      gap: 10px; 
+      margin-bottom: 16px;
+    }
+    .search-bar input {
+      flex: 1; 
+      padding: 14px 16px;
+      background: rgba(13, 17, 23, 0.6);
+      border: 1px solid rgba(139, 148, 158, 0.2);
+      border-radius: 12px; 
+      color: #f0f6fc; 
+      font-size: 14px;
+      font-family: inherit; 
+      transition: all 0.25s ease; 
+      outline: none;
+      backdrop-filter: blur(10px);
+    }
+    .search-bar input:focus { 
+      border-color: #f06595; 
+      background: rgba(13, 17, 23, 0.8);
+      box-shadow: 0 0 0 3px rgba(240, 101, 149, 0.15);
+    }
+    .search-bar input::placeholder { 
+      color: #6e7681; 
+    }
+    .search-bar button {
+      padding: 14px 22px; 
+      border: none; 
+      border-radius: 12px;
+      font-size: 14px; 
+      font-weight: 600; 
+      cursor: pointer;
+      font-family: inherit;
+      background: linear-gradient(135deg, #ff6b6b, #cc5de8);
+      color: white; 
+      white-space: nowrap;
+      transition: all 0.3s ease;
+      box-shadow: 0 4px 15px rgba(240, 101, 149, 0.3);
+    }
+    .search-bar button:hover { 
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(240, 101, 149, 0.4);
+    }
+    .search-bar button:disabled {
+      opacity: 0.7;
+      cursor: not-allowed;
+    }
+
+    .field { margin-bottom: 14px; }
+    .field label { 
+      display: block; 
+      font-size: 12px; 
+      color: #8b949e; 
+      margin-bottom: 6px; 
+      font-weight: 500;
+    }
+    
+    .field input, .field select {
+      width: 100%; padding: 12px 14px;
+      background: rgba(13, 17, 23, 0.6);
+      border: 1px solid rgba(139, 148, 158, 0.2);
+      border-radius: 10px; color: #f0f6fc; font-size: 13px;
+      font-family: inherit; 
+      transition: all 0.25s ease; 
+      outline: none;
+      backdrop-filter: blur(10px);
+    }
+    .field input:focus, .field select:focus { 
+      border-color: #f06595; 
+      background: rgba(13, 17, 23, 0.8);
+      box-shadow: 0 0 0 3px rgba(240, 101, 149, 0.15);
+    }
+    .field input::placeholder { color: #6e7681; }
+
+    .field-row {
+      display: flex; gap: 10px; align-items: center;
+    }
+    .field-row label { flex: 1; font-size: 12px; color: #9090b0; margin: 0; }
+    .toggle {
+      position: relative; width: 48px; height: 26px; flex-shrink: 0;
+    }
+    .toggle input { opacity: 0; width: 0; height: 0; }
+    .toggle-slider {
+      position: absolute; inset: 0; cursor: pointer;
+      background: rgba(139, 148, 158, 0.2); 
+      border-radius: 26px;
+      transition: all 0.3s ease;
+    }
+    .toggle-slider::before {
+      content: ''; position: absolute; left: 3px; top: 3px;
+      width: 20px; height: 20px; border-radius: 50%;
+      background: linear-gradient(135deg, #8b949e, #6e7681); 
+      transition: all 0.3s ease;
+      box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+    }
+    .toggle input:checked + .toggle-slider { 
+      background: linear-gradient(135deg, rgba(255,107,107,0.3), rgba(204,93,232,0.3)); 
+    }
+    .toggle input:checked + .toggle-slider::before { 
+      transform: translateX(22px); 
+      background: linear-gradient(135deg, #ff6b6b, #cc5de8);
+      box-shadow: 0 2px 8px rgba(240, 101, 149, 0.4);
+    }
+
+    .btn {
+      width: 100%; padding: 14px; border: none; border-radius: 12px;
+      font-size: 14px; font-weight: 600; cursor: pointer;
+      font-family: inherit; 
+      transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+      background: linear-gradient(135deg, #ff6b6b 0%, #f06595 50%, #cc5de8 100%);
+      color: white;
+      position: relative;
+      overflow: hidden;
+      box-shadow: 0 4px 15px rgba(240, 101, 149, 0.3);
+    }
+    .btn::before {
+      content: '';
+      position: absolute;
+      top: 0; left: -100%; width: 100%; height: 100%;
+      background: linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent);
+      transition: left 0.5s;
+    }
+    .btn:hover { 
+      transform: translateY(-2px);
+      box-shadow: 0 8px 25px rgba(240, 101, 149, 0.4);
+    }
+    .btn:hover::before {
+      left: 100%;
+    }
+    .btn:active { 
+      transform: translateY(0);
+    }
+
+    .btn-secondary {
+      width: 100%; padding: 12px; border: none; border-radius: 10px;
+      font-size: 13px; font-weight: 500; cursor: pointer;
+      font-family: inherit; 
+      transition: all 0.25s ease; 
+      margin-top: 10px;
+      background: rgba(13, 17, 23, 0.6); 
+      color: #8b949e;
+      border: 1px solid rgba(139, 148, 158, 0.2);
+      backdrop-filter: blur(10px);
+    }
+    .btn-secondary:hover { 
+      background: rgba(139, 148, 158, 0.15); 
+      color: #f0f6fc;
+      border-color: rgba(240, 101, 149, 0.3);
+    }
+
+    .status {
+      margin-top: 14px; padding: 12px; border-radius: 10px;
+      font-size: 12px; text-align: center; display: none;
+      backdrop-filter: blur(10px);
+      border: 1px solid rgba(255,255,255,0.1);
+      animation: statusPulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes statusPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(52, 211, 153, 0); }
+      50% { box-shadow: 0 0 20px 5px rgba(52, 211, 153, 0.1); }
+    }
+    
+    .status.success { 
+      display: block; 
+      background: rgba(52,211,153,0.15); 
+      color: #34d399; 
+      border: 1px solid rgba(52,211,153,0.3);
+      box-shadow: 0 0 20px rgba(52,211,153,0.1);
+    }
+    .status.error { 
+      display: block; 
+      background: rgba(248,113,113,0.15); 
+      color: #f87171; 
+      border: 1px solid rgba(248,113,113,0.3);
+      box-shadow: 0 0 20px rgba(248,113,113,0.1);
+      animation: errorPulse 2s ease-in-out infinite;
+    }
+    
+    @keyframes errorPulse {
+      0%, 100% { box-shadow: 0 0 0 0 rgba(248, 113, 113, 0); }
+      50% { box-shadow: 0 0 20px 5px rgba(248, 113, 113, 0.1); }
+    }
+
+    .info-box {
+      background: rgba(255,255,255,0.04); 
+      padding: 16px;
+      border-radius: 12px; 
+      border: 1px solid rgba(255,255,255,0.08);
+      margin-top: 16px;
+      backdrop-filter: blur(10px);
+      position: relative;
+      overflow: hidden;
+    }
+    
+    .info-box::before {
+      content: '';
+      position: absolute;
+      top: 0; left: 0; right: 0; height: 2px;
+      background: linear-gradient(90deg, #ff6a00, #ee0979, #ff6a00);
+      background-size: 200% 100%;
+      animation: borderShimmer 3s linear infinite;
+    }
+    
+    @keyframes borderShimmer {
+      0% { background-position: 0% 50%; }
+      100% { background-position: 200% 50%; }
+    }
+    
+    .info-box h3 { 
+      font-size: 14px; 
+      background: linear-gradient(135deg, #ff6b6b, #f06595);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+      margin-bottom: 12px; 
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 8px;
+    }
+    .info-box ol { 
+      font-size: 13px; 
+      color: #8b949e; 
+      padding-left: 20px; 
+      line-height: 1.8;
+    }
+    .info-box li { margin-bottom: 6px; }
+    .info-box a { 
+      color: #f06595; 
+      text-decoration: none;
+      transition: color 0.2s;
+    }
+    .info-box a:hover { 
+      color: #ff6b6b;
+      text-decoration: underline;
+    }
+
+    .version {
+      text-align: center; font-size: 10px; color: #5a5a78;
+      margin-top: 12px; padding-top: 10px;
+      border-top: 1px solid rgba(255,255,255,0.05);
+    }
+
+    .row-2 { display: grid; grid-template-columns: 1fr 1fr; gap: 10px; }
+
+    #results {
+      max-height: 320px; overflow-y: auto; margin-bottom: 10px;
+    }
+    #results::-webkit-scrollbar { width: 4px; }
+    #results::-webkit-scrollbar-track { background: transparent; }
+    #results::-webkit-scrollbar-thumb { background: rgba(255,255,255,0.08); border-radius: 10px; }
+
+  </style>
+</head>
+<body>
+  <div class="header">
+    <h1>AliSmart Finder</h1>
+    <p>Smart Shopping Assistant for AliExpress</p>
+  </div>
+
+  <div class="content">
+    <div class="section">
+      <div class="section-title">Search Products</div>
+      <button class="quick-entry-btn" id="quickEntryBtn">🛍️ Quick Entry to AliExpress</button>
+      <div class="search-bar">
+        <input type="text" id="searchInput" placeholder="Search AliExpress..." />
+        <button id="searchBtn">Search</button>
+      </div>
+      <div id="results"></div>
+    </div>
+
+    <div class="section">
+      <div class="section-title">Preferences</div>
+      <div class="row-2">
+        <div class="field">
+          <label>Results Per Page</label>
+          <select id="resultsPerPage">
+            <option value="20">20</option>
+            <option value="30">30</option>
+            <option value="50" selected>50</option>
+          </select>
+        </div>
+        <div class="field">
+          <label>Default Sort</label>
+          <select id="sortBy">
+            <option value="SALE_PRICE_ASC">Price: Low to High</option>
+            <option value="SALE_PRICE_DESC">Price: High to Low</option>
+            <option value="LAST_VOLUME_DESC">Best Selling</option>
+            <option value="EVALUATE_RATE_DESC">Highest Rated</option>
+          </select>
+        </div>
+      </div>
+      <div class="field">
+        <div class="hint">All prices displayed in USD ($)</div>
+      </div>
+    </div>
+
+    <button class="btn" id="saveBtn">Save Settings</button>
+    <div class="status" id="status"></div>
+
+    <div class="info-box">
+      <h3>How to Use</h3>
+      <ol>
+        <li>Browse any AliExpress product page</li>
+        <li>AliSmart opens automatically on the right side</li>
+        <li>Instantly see cheaper alternatives &amp; compare prices</li>
+        <li>Hover over any product image to find similar items instantly</li>
+      </ol>
+    </div>
+
+    <div class="version" style="margin-top: 16px; padding-top: 12px; line-height: 1.6;">
+      <div style="font-size: 9px; color: #5a5a78; margin-bottom: 8px;">
+        AliSmart Finder participates in affiliate programs and may earn a commission on qualifying purchases at no extra cost to you.
+      </div>
+      AliSmart Finder v4.0.0
+    </div>
+  </div>
+
+  <script src="popup.js"></script>
+</body>
+</html>

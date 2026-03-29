@@ -1,0 +1,429 @@
+/**
+ * AliSmart Finder Pro - Sidebar Styles
+ * סגנונות CSS ל-Sidebar
+ * 
+ * כולל:
+ * - אנימציית slide-in
+ * - תמיכה ב-RTL (עברית)
+ * - מצב יום/לילה
+ * - עיצוב "Quiet Luxury"
+ */
+
+/* Animations */
+@keyframes slideIn {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideOut {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(100%);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+/* Sidebar Base */
+.als-sidebar {
+  position: fixed;
+  top: 0;
+  right: 0;
+  width: 380px;
+  height: 100vh;
+  background-color: #ffffff;
+  box-shadow: -4px 0 20px rgba(0, 0, 0, 0.15);
+  z-index: 2147483646;
+  display: flex;
+  flex-direction: column;
+  transform: translateX(100%);
+  transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  direction: rtl;
+}
+
+.als-sidebar--open {
+  transform: translateX(0);
+}
+
+/* Overlay */
+.als-sidebar-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  z-index: 2147483645;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+/* RTL Support */
+.als-sidebar[dir="rtl"] {
+  right: 0;
+  left: auto;
+  text-align: right;
+}
+
+/* Dark Mode */
+.als-sidebar--dark {
+  background-color: #1a1a2e;
+  color: #f8f9fa;
+}
+
+.als-sidebar--dark .als-sidebar-header {
+  background-color: #1a1a2e;
+  border-bottom-color: #2d2d44;
+}
+
+.als-sidebar--dark .als-sidebar-content {
+  background-color: #1a1a2e;
+}
+
+/* Header */
+.als-sidebar-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px 20px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+/* Navigation Tabs */
+.als-sidebar-tabs {
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  padding: 0 12px;
+  flex-shrink: 0;
+  background-color: #ffffff;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.als-sidebar-tab {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  flex: 1;
+  padding: 14px 8px;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  font-size: 13px;
+  font-weight: 500;
+  font-family: inherit;
+  transition: all 0.2s ease;
+  position: relative;
+  white-space: nowrap;
+}
+
+.als-sidebar-tab:hover {
+  color: #ee0979;
+}
+
+.als-sidebar-tab--active {
+  color: #ee0979;
+  background-color: rgba(238, 9, 121, 0.05);
+}
+
+/* Tab Indicator */
+.als-sidebar-tab--active::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 20%;
+  right: 20%;
+  height: 2px;
+  background: linear-gradient(90deg, #ff6a00, #ee0979);
+  border-radius: 1px;
+}
+
+/* Content Area */
+.als-sidebar-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  background-color: #f9fafb;
+}
+
+.als-sidebar--dark .als-sidebar-content {
+  background-color: #16213e;
+}
+
+/* Scrollbar */
+.als-sidebar-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.als-sidebar-content::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.als-sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #d1d5db;
+  border-radius: 3px;
+}
+
+.als-sidebar--dark .als-sidebar-content::-webkit-scrollbar-thumb {
+  background-color: #3d3d5c;
+}
+
+/* Product Cards */
+.als-product-card {
+  display: flex;
+  gap: 12px;
+  padding: 12px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  position: relative;
+  transition: box-shadow 0.2s ease;
+  margin-bottom: 12px;
+}
+
+.als-product-card:hover {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.als-sidebar--dark .als-product-card {
+  background-color: #2d2d44;
+  border-color: #3d3d5c;
+}
+
+/* Best Deal Badge */
+.als-best-deal-badge {
+  position: absolute;
+  top: -6px;
+  right: 12px;
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: white;
+  font-size: 10px;
+  font-weight: 700;
+  padding: 4px 10px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  box-shadow: 0 2px 8px rgba(238, 9, 121, 0.3);
+}
+
+/* Trust Badges */
+.als-trust-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 10px;
+  font-weight: 600;
+  padding: 2px 8px;
+  border-radius: 4px;
+}
+
+.als-trust-badge--high {
+  background-color: #d4edda;
+  color: #155724;
+}
+
+.als-trust-badge--medium {
+  background-color: #fff3cd;
+  color: #856404;
+}
+
+.als-trust-badge--low {
+  background-color: #f8f9fa;
+  color: #6c757d;
+}
+
+/* Rank Badges */
+.als-rank-badge {
+  position: absolute;
+  top: -4px;
+  left: -4px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 11px;
+  font-weight: 800;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.als-rank-badge--1 {
+  background: linear-gradient(135deg, #ffd700, #ffaa00);
+  color: #1a1a2e;
+}
+
+.als-rank-badge--2 {
+  background: #c0c0c0;
+  color: #ffffff;
+}
+
+.als-rank-badge--3 {
+  background: #cd7f32;
+  color: #ffffff;
+}
+
+/* Buttons */
+.als-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 6px;
+  padding: 8px 16px;
+  font-size: 13px;
+  font-weight: 600;
+  border-radius: 8px;
+  border: none;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  font-family: inherit;
+}
+
+.als-btn--primary {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  color: white;
+}
+
+.als-btn--primary:hover {
+  opacity: 0.9;
+  box-shadow: 0 4px 12px rgba(238, 9, 121, 0.4);
+}
+
+.als-btn--secondary {
+  background-color: #f3f4f6;
+  color: #374151;
+  border: 1px solid #e5e7eb;
+}
+
+.als-btn--secondary:hover {
+  background-color: #e5e7eb;
+}
+
+.als-btn--icon {
+  width: 32px;
+  height: 32px;
+  padding: 0;
+  border-radius: 6px;
+}
+
+/* Loading State */
+.als-loading {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+}
+
+.als-spinner {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  border: 3px solid #f3f3f3;
+  border-top-color: #ee0979;
+  animation: spin 1s linear infinite;
+}
+
+/* Empty State */
+.als-empty {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.als-empty__icon {
+  margin-bottom: 16px;
+  opacity: 0.5;
+}
+
+.als-empty__title {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1a1a2e;
+  margin-bottom: 8px;
+}
+
+.als-empty__text {
+  font-size: 14px;
+  color: #6b7280;
+  line-height: 1.5;
+  max-width: 280px;
+}
+
+/* Utility Classes */
+.als-text-gradient {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.als-bg-gradient {
+  background: linear-gradient(135deg, #ff6a00, #ee0979);
+}
+
+/* Responsive */
+@media (max-width: 400px) {
+  .als-sidebar {
+    width: 100vw;
+  }
+}
+
+/* Accessibility */
+@media (prefers-reduced-motion: reduce) {
+  .als-sidebar {
+    transition: none;
+  }
+  
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+/* Focus States */
+.als-sidebar button:focus-visible,
+.als-sidebar a:focus-visible {
+  outline: 2px solid #ee0979;
+  outline-offset: 2px;
+}
